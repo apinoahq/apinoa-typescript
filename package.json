@@ -1,0 +1,59 @@
+{
+  "name": "apinoa",
+  "version": "0.1.0",
+  "description": "Official TypeScript/JavaScript SDK for the apinoa API: marketplace, social and image-translation data through one API.",
+  "license": "MIT",
+  "homepage": "https://apinoa.com/docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apinoahq/apinoa-typescript.git"
+  },
+  "bugs": "https://github.com/apinoahq/apinoa-typescript/issues",
+  "keywords": [
+    "apinoa",
+    "amazon",
+    "walmart",
+    "shopify",
+    "aliexpress",
+    "tiktok",
+    "reddit",
+    "youtube",
+    "instagram",
+    "scraping",
+    "api",
+    "sdk"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "reference.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && node scripts/mark-module-types.mjs",
+    "test": "npm run build && node --test test/*.test.mjs && node scripts/check-readme.mjs",
+    "test:live": "npm run build && node --test test/live/*.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "~5.7.3"
+  }
+}
