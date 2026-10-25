@@ -1,11 +1,11 @@
-# apinoa
+# @apinoa/sdk
 
 The official TypeScript and JavaScript SDK for [apinoa](https://apinoa.com): product data from Amazon,
 Walmart, Shopify, TikTok Shop and AliExpress, social data from TikTok, YouTube, Instagram, Threads, X,
 Reddit and LinkedIn, and image translation, through one API.
 
 ```sh
-npm install apinoa
+npm install @apinoa/sdk
 ```
 
 Requires Node.js 20 or later (or any runtime with `fetch`: Bun, Deno, Cloudflare Workers).
@@ -15,7 +15,7 @@ Requires Node.js 20 or later (or any runtime with `fetch`: Bun, Deno, Cloudflare
 Create a key under **Dashboard > API keys** at [apinoa.com](https://apinoa.com), then:
 
 ```ts
-import { ApinoaClient } from "apinoa";
+import { ApinoaClient } from "@apinoa/sdk";
 
 const apinoa = new ApinoaClient({ apiKey: process.env.APINOA_API_KEY });
 
@@ -73,7 +73,7 @@ code to branch on; every code is listed at [apinoa.com/docs/errors](https://apin
 failed call is not billed.
 
 ```ts
-import { Apinoa, ApinoaError } from "apinoa";
+import { Apinoa, ApinoaError } from "@apinoa/sdk";
 
 try {
   await apinoa.amazon.product({ id: "B000000000" });

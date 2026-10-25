@@ -7,9 +7,9 @@ const blocks = [...readFileSync("README.md", "utf8").matchAll(/```ts\n([\s\S]*?)
 rmSync(".readme-check", { recursive: true, force: true });
 mkdirSync(".readme-check");
 // Blocks build on each other (the client is created once, in the first), so each is prefixed with it.
-const prelude = 'import { ApinoaClient, Apinoa, ApinoaError } from "apinoa";\nconst apinoa = new ApinoaClient({ apiKey: "k" });\n';
+const prelude = 'import { ApinoaClient, Apinoa, ApinoaError } from "@apinoa/sdk";\nconst apinoa = new ApinoaClient({ apiKey: "k" });\n';
 blocks.forEach((code, i) => {
-  const body = code.replace(/^import \{[^}]*\} from "apinoa";\n/gm, "").replace(/^const apinoa = new ApinoaClient\([^)]*\);\n/m, "");
+  const body = code.replace(/^import \{[^}]*\} from "@apinoa\/sdk";\n/gm, "").replace(/^const apinoa = new ApinoaClient\([^)]*\);\n/m, "");
   writeFileSync(`.readme-check/block${i}.ts`, prelude + body + "\nexport {};\n");
 });
 writeFileSync(
@@ -18,7 +18,7 @@ writeFileSync(
     compilerOptions: {
       strict: true, noEmit: true, target: "ES2022", module: "ESNext", moduleResolution: "Bundler",
       lib: ["ES2022", "DOM"], types: ["node"], skipLibCheck: true, noUnusedLocals: false,
-      paths: { apinoa: ["../dist/esm/index.d.ts"] },
+      paths: { "@apinoa/sdk": ["../dist/esm/index.d.ts"] },
     },
     include: ["*.ts"],
   }),
