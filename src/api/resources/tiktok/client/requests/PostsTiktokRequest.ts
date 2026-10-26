@@ -21,7 +21,7 @@ export interface PostsTiktokRequest {
     playlist?: string;
     /** Default feed only: explore category id (default 120). */
     category?: string;
-    /** Items per page, 1–50. */
+    /** Items per page, 1–30. */
     limit?: number;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;

@@ -13,7 +13,7 @@ export interface ProfilesTiktokRequest {
     userId?: string;
     /** Which list: followers or following. */
     type?: Apinoa.ProfilesTiktokRequestType;
-    /** Items per page, 1–50. */
+    /** Items per page, 1–30. */
     limit?: number;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
