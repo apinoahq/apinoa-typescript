@@ -12,5 +12,16 @@ export interface Offer {
     inStock?: boolean | undefined;
     status?: string | undefined;
     delivery?: Apinoa.DeliveryOption | undefined;
+    shippingOptions?: Apinoa.DeliveryOption[] | undefined;
+    unitPrice?: Offer.UnitPrice | undefined;
+    promotions?: string[] | undefined;
+    paymentOptions?: string[] | undefined;
     ext?: Apinoa.Ext | undefined;
+}
+
+export namespace Offer {
+    export interface UnitPrice {
+        price: Apinoa.Money;
+        unit?: string | undefined;
+    }
 }

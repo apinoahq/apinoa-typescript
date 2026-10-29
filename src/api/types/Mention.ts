@@ -4,4 +4,5 @@ export interface Mention {
     handle: string;
     id?: string | undefined;
     displayName?: string | undefined;
+    ext?: Record<string, unknown> | undefined;
 }

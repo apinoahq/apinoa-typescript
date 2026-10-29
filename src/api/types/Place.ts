@@ -7,7 +7,7 @@ export interface Place {
     lng?: number | undefined;
     address?: string | undefined;
     city?: string | undefined;
-    region?: string | undefined;
-    postalCode?: string | undefined;
+    type?: string | undefined;
     country?: string | undefined;
+    ext?: Record<string, unknown> | undefined;
 }

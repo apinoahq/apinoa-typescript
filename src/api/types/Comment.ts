@@ -10,8 +10,10 @@ export interface Comment {
     parentId?: string | undefined;
     author: Apinoa.AccountRef;
     text: string;
+    entities?: Apinoa.Entities | undefined;
     createdAt?: string | undefined;
     editedAt?: string | undefined;
+    edited?: boolean | undefined;
     lang?: string | undefined;
     pinned?: boolean | undefined;
     byAuthor?: boolean | undefined;
@@ -42,7 +44,6 @@ export namespace Comment {
 
     export interface MoreReplies {
         count?: number | undefined;
-        ids?: string[] | undefined;
         cursor?: string | undefined;
         ext?: Record<string, unknown> | undefined;
     }

@@ -6,17 +6,10 @@ export interface Seller {
     id?: string | undefined;
     name?: string | undefined;
     url?: string | undefined;
+    logoUrl?: string | undefined;
     rating?: Apinoa.Rating | undefined;
     country?: string | undefined;
-    detailedRatings?: Seller.DetailedRatings | undefined;
     positivePercent?: number | undefined;
+    productCount?: number | undefined;
     ext?: Apinoa.Ext | undefined;
-}
-
-export namespace Seller {
-    export interface DetailedRatings {
-        itemAsDescribed?: number | undefined;
-        communication?: number | undefined;
-        shippingSpeed?: number | undefined;
-    }
 }

@@ -17,6 +17,7 @@ export interface Account {
     links?: Apinoa.Link[] | undefined;
     private?: boolean | undefined;
     category?: string | undefined;
+    location?: string | undefined;
     ext?: Record<string, unknown> | undefined;
 }
 

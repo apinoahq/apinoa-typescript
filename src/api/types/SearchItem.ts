@@ -9,8 +9,10 @@ export interface SearchItem {
     title: string;
     price?: Apinoa.Money | undefined;
     listPrice?: Apinoa.Money | undefined;
+    subscriptionPrice?: Apinoa.Money | undefined;
+    description?: string | undefined;
+    fulfilledBy?: string | undefined;
     condition?: string | undefined;
-    conditionNote?: string | undefined;
     unitPrice?: SearchItem.UnitPrice | undefined;
     brand?: string | undefined;
     rating?: Apinoa.Rating | undefined;
@@ -33,8 +35,6 @@ export interface SearchItem {
     offersSummary?: SearchItem.OffersSummary | undefined;
     priceRange?: SearchItem.PriceRange | undefined;
     endsAt?: string | undefined;
-    purchaseLimit?: number | undefined;
-    listedAt?: string | undefined;
     deliveryTo?: SearchItem.DeliveryTo | undefined;
     ext?: Apinoa.Ext | undefined;
     imageUrl?: string | undefined;
@@ -42,6 +42,8 @@ export interface SearchItem {
     variantCount?: number | undefined;
     category?: Apinoa.CategoryStep[] | undefined;
     matchScore?: number | undefined;
+    offers?: Apinoa.Offer[] | undefined;
+    variants?: Apinoa.Variant[] | undefined;
 }
 
 export namespace SearchItem {
@@ -53,7 +55,7 @@ export namespace SearchItem {
     export interface OffersSummary {
         count?: number | undefined;
         fromPrice?: Apinoa.Money | undefined;
-        url?: string | undefined;
+        ext?: Apinoa.Ext | undefined;
     }
 
     export interface PriceRange {

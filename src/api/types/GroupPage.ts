@@ -6,7 +6,7 @@ export interface GroupPage {
     platform: GroupPage.Platform;
     items: Apinoa.Group[];
     cursor?: string | undefined;
-    total?: number | undefined;
+    order?: string | undefined;
     ext?: Record<string, unknown> | undefined;
 }
 

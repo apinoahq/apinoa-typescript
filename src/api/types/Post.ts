@@ -11,6 +11,7 @@ export interface Post {
     text?: string | undefined;
     createdAt?: string | undefined;
     editedAt?: string | undefined;
+    edited?: boolean | undefined;
     lang?: string | undefined;
     media: Apinoa.SocialMedia[];
     metrics?: Post.Metrics | undefined;
@@ -51,6 +52,5 @@ export namespace Post {
         reposts?: number | undefined;
         quotes?: number | undefined;
         saves?: number | undefined;
-        liveViewers?: number | undefined;
     }
 }

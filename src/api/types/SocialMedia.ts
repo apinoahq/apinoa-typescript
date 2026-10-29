@@ -4,6 +4,7 @@ import type * as Apinoa from "../index.js";
 
 export interface SocialMedia {
     type: SocialMedia.Type;
+    id?: string | undefined;
     url: string;
     width?: number | undefined;
     height?: number | undefined;
@@ -12,6 +13,10 @@ export interface SocialMedia {
     variants?: Apinoa.MediaVariant[] | undefined;
     altText?: string | undefined;
     caption?: string | undefined;
+    title?: string | undefined;
+    hasAudio?: boolean | undefined;
+    tags?: Apinoa.MediaTag[] | undefined;
+    captions?: Apinoa.CaptionTrack[] | undefined;
     ext?: Record<string, unknown> | undefined;
 }
 

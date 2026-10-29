@@ -7,4 +7,6 @@
 export interface PostThreadsRequest {
     /** Post shortcode, or the post URL (…/@user/post/<code> or …/t/<code>). */
     id?: string;
+    /** Attach from the same page, at no extra cost: comments (the first replies, top order, ext.comments), related (the related threads Threads suggests beside it, ext.related). */
+    include?: string | string[];
 }

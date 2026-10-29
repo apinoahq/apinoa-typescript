@@ -9,4 +9,6 @@ export interface SearchResult {
     items: Apinoa.SearchItem[];
     cursor?: string | undefined;
     facets?: Apinoa.Facet[] | undefined;
+    relatedSearches?: string[] | undefined;
+    ext?: Apinoa.Ext | undefined;
 }

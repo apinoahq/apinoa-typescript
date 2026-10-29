@@ -26,7 +26,7 @@ export class RedditClient {
     }
 
     /**
-     * Returns `Account` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/reddit/profile
+     * Returns `Account` in `data`. Costs 1 unit, up to 5 units. Reference: https://apinoa.com/docs/api-reference/reddit/profile
      *
      * @param {Apinoa.ProfileRedditRequest} request
      * @param {RedditClient.RequestOptions} requestOptions - Request-specific configuration.

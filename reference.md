@@ -1551,7 +1551,7 @@ await client.linkedin.jobs();
 <dl>
 <dd>
 
-Returns `Account` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/reddit/profile
+Returns `Account` in `data`. Costs 1 unit, up to 5 units. Reference: https://apinoa.com/docs/api-reference/reddit/profile
 </dd>
 </dl>
 </dd>

@@ -16,6 +16,7 @@ export interface Job {
     industries?: string | undefined;
     description?: string | undefined;
     descriptionHtml?: string | undefined;
+    applyMethod?: Job.ApplyMethod | undefined;
 }
 
 export namespace Job {
@@ -30,4 +31,10 @@ export namespace Job {
         url?: string | undefined;
         logoUrl?: string | undefined;
     }
+
+    export const ApplyMethod = {
+        Linkedin: "linkedin",
+        External: "external",
+    } as const;
+    export type ApplyMethod = (typeof ApplyMethod)[keyof typeof ApplyMethod];
 }

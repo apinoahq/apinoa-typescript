@@ -5,12 +5,11 @@ import type * as Apinoa from "../index.js";
 export interface Variant {
     id: string;
     productId?: string | undefined;
-    sku?: string | undefined;
+    name?: string | undefined;
+    images?: string[] | undefined;
     price?: Apinoa.Money | undefined;
     listPrice?: Apinoa.Money | undefined;
-    bulkPrice?: Apinoa.Money | undefined;
     purchaseLimit?: number | undefined;
-    taxIncluded?: boolean | undefined;
     inStock?: boolean | undefined;
     stock?: number | undefined;
     selections: Apinoa.VariantSelection[];

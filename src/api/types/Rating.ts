@@ -4,5 +4,6 @@ export interface Rating {
     average: number;
     count?: number | undefined;
     distribution?: Record<string, number> | undefined;
+    starCounts?: Record<string, number> | undefined;
     grouped?: boolean | undefined;
 }

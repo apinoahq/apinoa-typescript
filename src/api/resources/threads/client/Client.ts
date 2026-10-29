@@ -58,10 +58,11 @@ export class ThreadsClient {
         request: Apinoa.ProfileThreadsRequest = {},
         requestOptions?: ThreadsClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.AccountResponse>> {
-        const { username, userId } = request;
+        const { username, userId, include } = request;
         const _queryParams: Record<string, unknown> = {
             username,
             userId,
+            include,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(
@@ -81,6 +82,7 @@ export class ThreadsClient {
             queryString: core.url
                 .queryBuilder()
                 .addMany(_queryParams)
+                .add("include", _queryParams.include, { style: "comma" })
                 .mergeAdditional(requestOptions?.queryParams)
                 .build(),
             timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,
@@ -187,9 +189,10 @@ export class ThreadsClient {
         request: Apinoa.PostThreadsRequest = {},
         requestOptions?: ThreadsClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PostResponse>> {
-        const { id } = request;
+        const { id, include } = request;
         const _queryParams: Record<string, unknown> = {
             id,
+            include,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(
@@ -209,6 +212,7 @@ export class ThreadsClient {
             queryString: core.url
                 .queryBuilder()
                 .addMany(_queryParams)
+                .add("include", _queryParams.include, { style: "comma" })
                 .mergeAdditional(requestOptions?.queryParams)
                 .build(),
             timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,
@@ -315,13 +319,14 @@ export class ThreadsClient {
         request: Apinoa.PostsThreadsRequest = {},
         requestOptions?: ThreadsClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PostPageResponse>> {
-        const { username, type: type_, query, hashtag, sort, cursor } = request;
+        const { username, type: type_, query, hashtag, sort, include, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             username,
             type: type_ != null ? type_ : undefined,
             query,
             hashtag,
             sort: sort != null ? sort : undefined,
+            include,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
@@ -342,6 +347,7 @@ export class ThreadsClient {
             queryString: core.url
                 .queryBuilder()
                 .addMany(_queryParams)
+                .add("include", _queryParams.include, { style: "comma" })
                 .mergeAdditional(requestOptions?.queryParams)
                 .build(),
             timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,
@@ -448,10 +454,11 @@ export class ThreadsClient {
         request: Apinoa.CommentsThreadsRequest = {},
         requestOptions?: ThreadsClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.CommentPageResponse>> {
-        const { post, sort, cursor } = request;
+        const { post, sort, include, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             post,
             sort: sort != null ? sort : undefined,
+            include,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
@@ -472,6 +479,7 @@ export class ThreadsClient {
             queryString: core.url
                 .queryBuilder()
                 .addMany(_queryParams)
+                .add("include", _queryParams.include, { style: "comma" })
                 .mergeAdditional(requestOptions?.queryParams)
                 .build(),
             timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,

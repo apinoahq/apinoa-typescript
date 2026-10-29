@@ -9,4 +9,6 @@ export interface ProfileThreadsRequest {
     username?: string;
     /** Numeric Threads user id. */
     userId?: string;
+    /** username only. Attach from the same page, at no extra cost: posts (the creator's latest threads, ext.posts). */
+    include?: string | string[];
 }

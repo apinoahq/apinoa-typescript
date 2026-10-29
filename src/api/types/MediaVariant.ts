@@ -6,4 +6,9 @@ export interface MediaVariant {
     height?: number | undefined;
     bitrate?: number | undefined;
     contentType?: string | undefined;
+    codec?: string | undefined;
+    sizeBytes?: number | undefined;
+    fps?: number | undefined;
+    quality?: string | undefined;
+    ext?: Record<string, unknown> | undefined;
 }

@@ -11,6 +11,8 @@ export interface CommentsThreadsRequest {
     post?: string;
     /** top (default) or recent. */
     sort?: Apinoa.CommentsThreadsRequestSort;
+    /** Top order only. Attach from the same page, at no extra cost: post (the post itself, in `post`), related (the related threads Threads suggests beside it, ext.related). */
+    include?: string | string[];
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

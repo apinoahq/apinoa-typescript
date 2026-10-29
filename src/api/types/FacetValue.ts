@@ -3,6 +3,5 @@
 export interface FacetValue {
     value: string;
     name: string;
-    count?: number | undefined;
     selected?: boolean | undefined;
 }

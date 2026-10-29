@@ -2,9 +2,7 @@
 
 export interface Broadcast {
     status: Broadcast.Status;
-    scheduledAt?: string | undefined;
-    startedAt?: string | undefined;
-    endedAt?: string | undefined;
+    ext?: Record<string, unknown> | undefined;
 }
 
 export namespace Broadcast {

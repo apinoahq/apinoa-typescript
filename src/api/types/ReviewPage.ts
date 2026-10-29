@@ -10,5 +10,20 @@ export interface ReviewPage {
     reviews: Apinoa.Review[];
     cursor?: string | undefined;
     grouped?: boolean | undefined;
+    reviewSummary?: string | undefined;
+    reviewAspects?: ReviewPage.ReviewAspects.Item[] | undefined;
     ext?: Apinoa.Ext | undefined;
+}
+
+export namespace ReviewPage {
+    export type ReviewAspects = ReviewAspects.Item[];
+
+    export namespace ReviewAspects {
+        export interface Item {
+            name: string;
+            mentions?: number | undefined;
+            positive?: number | undefined;
+            negative?: number | undefined;
+        }
+    }
 }

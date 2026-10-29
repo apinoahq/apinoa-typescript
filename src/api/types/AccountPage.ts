@@ -6,7 +6,6 @@ export interface AccountPage {
     platform: AccountPage.Platform;
     items: Apinoa.Account[];
     cursor?: string | undefined;
-    total?: number | undefined;
     ext?: Record<string, unknown> | undefined;
 }
 

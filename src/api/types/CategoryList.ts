@@ -6,4 +6,5 @@ export interface CategoryList {
     marketplace: string;
     path: Apinoa.CategoryStep[];
     categories: Apinoa.CategoryNode[];
+    ext?: Apinoa.Ext | undefined;
 }

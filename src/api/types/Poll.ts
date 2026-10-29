@@ -4,6 +4,7 @@ export interface Poll {
     options: Poll.Options.Item[];
     totalVotes?: number | undefined;
     endsAt?: string | undefined;
+    ext?: Record<string, unknown> | undefined;
 }
 
 export namespace Poll {

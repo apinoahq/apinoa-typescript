@@ -6,4 +6,5 @@ export interface LinkPreview {
     description?: string | undefined;
     thumbnailUrl?: string | undefined;
     domain?: string | undefined;
+    ext?: Record<string, unknown> | undefined;
 }

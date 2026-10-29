@@ -10,13 +10,11 @@ export interface DeliveryOption {
     free?: boolean | undefined;
     minDays?: number | undefined;
     maxDays?: number | undefined;
-    guaranteedDays?: number | undefined;
     handlingDays?: number | undefined;
     cutoff?: string | undefined;
     condition?: string | undefined;
     available?: boolean | undefined;
-    membership?: string | undefined;
     minimumOrder?: Apinoa.Money | undefined;
-    tracking?: boolean | undefined;
     shipsFrom?: string | undefined;
+    ext?: Apinoa.Ext | undefined;
 }

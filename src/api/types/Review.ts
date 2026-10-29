@@ -5,6 +5,7 @@ import type * as Apinoa from "../index.js";
 export interface Review {
     id?: string | undefined;
     author?: string | undefined;
+    authorAvatarUrl?: string | undefined;
     rating: number;
     title?: string | undefined;
     body?: string | undefined;
@@ -12,7 +13,15 @@ export interface Review {
     country?: string | undefined;
     verified?: boolean | undefined;
     helpfulCount?: number | undefined;
+    unhelpfulCount?: number | undefined;
+    recommended?: boolean | undefined;
+    badges?: string[] | undefined;
+    syndicatedFrom?: string | undefined;
+    productId?: string | undefined;
+    productImageUrl?: string | undefined;
     variant?: string | undefined;
+    variantId?: string | undefined;
+    language?: string | undefined;
     images: string[];
     incentivized?: boolean | undefined;
     reply?: Review.Reply | undefined;

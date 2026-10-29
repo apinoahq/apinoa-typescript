@@ -23,6 +23,7 @@ export namespace JobPage {
             location?: string | undefined;
             listedAt?: string | undefined;
             logoUrl?: string | undefined;
+            insights?: string[] | undefined;
         }
 
         export namespace Item {

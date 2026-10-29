@@ -17,6 +17,8 @@ export interface PostsThreadsRequest {
     hashtag?: string;
     /** query only: top (default) or recent. */
     sort?: Apinoa.PostsThreadsRequestSort;
+    /** username only. Attach from the same page, at no extra cost: profile (the creator's profile, ext.profile). */
+    include?: string | string[];
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

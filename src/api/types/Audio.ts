@@ -5,4 +5,9 @@ export interface Audio {
     title?: string | undefined;
     artist?: string | undefined;
     url?: string | undefined;
+    coverUrl?: string | undefined;
+    durationSec?: number | undefined;
+    original?: boolean | undefined;
+    album?: string | undefined;
+    ext?: Record<string, unknown> | undefined;
 }

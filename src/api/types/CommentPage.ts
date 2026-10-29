@@ -7,7 +7,9 @@ export interface CommentPage {
     items: Apinoa.Comment[];
     cursor?: string | undefined;
     total?: number | undefined;
+    order?: string | undefined;
     ext?: Record<string, unknown> | undefined;
+    post?: Apinoa.Post | undefined;
 }
 
 export namespace CommentPage {

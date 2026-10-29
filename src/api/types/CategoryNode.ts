@@ -8,6 +8,6 @@ export interface CategoryNode {
     parentId?: string | undefined;
     hasChildren?: boolean | undefined;
     browsable?: boolean | undefined;
-    productCount?: number | undefined;
+    imageUrl?: string | undefined;
     ext?: Apinoa.Ext | undefined;
 }

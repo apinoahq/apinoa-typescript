@@ -9,8 +9,10 @@ export interface Product {
     title: string;
     price?: Apinoa.Money | undefined;
     listPrice?: Apinoa.Money | undefined;
+    subscriptionPrice?: Apinoa.Money | undefined;
+    description?: string | undefined;
+    fulfilledBy?: string | undefined;
     condition?: string | undefined;
-    conditionNote?: string | undefined;
     unitPrice?: Product.UnitPrice | undefined;
     brand?: string | undefined;
     rating?: Apinoa.Rating | undefined;
@@ -33,28 +35,26 @@ export interface Product {
     offersSummary?: Product.OffersSummary | undefined;
     priceRange?: Product.PriceRange | undefined;
     endsAt?: string | undefined;
-    purchaseLimit?: number | undefined;
-    listedAt?: string | undefined;
     deliveryTo?: Product.DeliveryTo | undefined;
     ext?: Apinoa.Ext | undefined;
-    description?: string | undefined;
+    conditionNote?: string | undefined;
+    purchaseLimit?: number | undefined;
+    listedAt?: string | undefined;
     features: string[];
+    highlights?: string[] | undefined;
     media: Apinoa.Media;
     category: Apinoa.CategoryStep[];
     options: Apinoa.Option[];
     variants: Apinoa.Variant[];
     offers: Apinoa.Offer[];
-    subscriptionPrice?: Apinoa.Money | undefined;
+    protectionPlans?: Apinoa.ProtectionPlan[] | undefined;
     reviewSummary?: string | undefined;
     reviewAspects: Product.ReviewAspects.Item[];
     boxContents: string[];
     brandUrl?: string | undefined;
-    fulfilledBy?: string | undefined;
     replacedBy?: string | undefined;
     reviews: Apinoa.Review[];
     package?: Product.Package | undefined;
-    wholesale?: boolean | undefined;
-    included?: string[] | undefined;
 }
 
 export namespace Product {
@@ -66,7 +66,7 @@ export namespace Product {
     export interface OffersSummary {
         count?: number | undefined;
         fromPrice?: Apinoa.Money | undefined;
-        url?: string | undefined;
+        ext?: Apinoa.Ext | undefined;
     }
 
     export interface PriceRange {
@@ -92,10 +92,7 @@ export namespace Product {
     }
 
     export interface Package {
-        lengthCm?: number | undefined;
-        widthCm?: number | undefined;
-        heightCm?: number | undefined;
         weightKg?: number | undefined;
-        soldInLot?: boolean | undefined;
+        ext?: Apinoa.Ext | undefined;
     }
 }

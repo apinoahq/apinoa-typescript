@@ -7,6 +7,7 @@ export interface PostPage {
     items: Apinoa.Post[];
     cursor?: string | undefined;
     total?: number | undefined;
+    order?: string | undefined;
     ext?: Record<string, unknown> | undefined;
 }
 
