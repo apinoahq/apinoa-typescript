@@ -2,17 +2,39 @@
 
 import { AliexpressClient } from "./api/resources/aliexpress/client/Client.js";
 import { AmazonClient } from "./api/resources/amazon/client/Client.js";
+import { AppStoreClient } from "./api/resources/appStore/client/Client.js";
+import { BaiduClient } from "./api/resources/baidu/client/Client.js";
+import { BingClient } from "./api/resources/bing/client/Client.js";
+import { ChatgptClient } from "./api/resources/chatgpt/client/Client.js";
+import { DaumClient } from "./api/resources/daum/client/Client.js";
+import { DuckduckgoClient } from "./api/resources/duckduckgo/client/Client.js";
+import { GeminiClient } from "./api/resources/gemini/client/Client.js";
+import { GoogleClient } from "./api/resources/google/client/Client.js";
+import { GoogleAiModeClient } from "./api/resources/googleAiMode/client/Client.js";
+import { GoogleAioClient } from "./api/resources/googleAio/client/Client.js";
+import { GooglePlayClient } from "./api/resources/googlePlay/client/Client.js";
+import { GoogleShoppingClient } from "./api/resources/googleShopping/client/Client.js";
+import { GoogleTrendsClient } from "./api/resources/googleTrends/client/Client.js";
 import { ImageTranslateClient } from "./api/resources/imageTranslate/client/Client.js";
 import { InstagramClient } from "./api/resources/instagram/client/Client.js";
 import { LinkedinClient } from "./api/resources/linkedin/client/Client.js";
 import { MarketplacesClient } from "./api/resources/marketplaces/client/Client.js";
+import { NaverClient } from "./api/resources/naver/client/Client.js";
+import { NaverAiBriefClient } from "./api/resources/naverAiBrief/client/Client.js";
+import { NaverAiTabClient } from "./api/resources/naverAiTab/client/Client.js";
 import { RedditClient } from "./api/resources/reddit/client/Client.js";
+import { SeznamClient } from "./api/resources/seznam/client/Client.js";
 import { ShopifyClient } from "./api/resources/shopify/client/Client.js";
+import { SogouClient } from "./api/resources/sogou/client/Client.js";
 import { ThreadsClient } from "./api/resources/threads/client/Client.js";
 import { TiktokClient } from "./api/resources/tiktok/client/Client.js";
 import { TiktokshopClient } from "./api/resources/tiktokshop/client/Client.js";
+import { TripadvisorClient } from "./api/resources/tripadvisor/client/Client.js";
 import { WalmartClient } from "./api/resources/walmart/client/Client.js";
 import { XClient } from "./api/resources/x/client/Client.js";
+import { YahooClient } from "./api/resources/yahoo/client/Client.js";
+import { YahooJapanClient } from "./api/resources/yahooJapan/client/Client.js";
+import { YandexClient } from "./api/resources/yandex/client/Client.js";
 import { YoutubeClient } from "./api/resources/youtube/client/Client.js";
 import type { BaseClientOptions, BaseRequestOptions } from "./BaseClient.js";
 import { type NormalizedClientOptionsWithAuth, normalizeClientOptionsWithAuth } from "./BaseClient.js";
@@ -28,15 +50,37 @@ export class ApinoaClient {
     protected readonly _options: NormalizedClientOptionsWithAuth<ApinoaClient.Options>;
     protected _aliexpress: AliexpressClient | undefined;
     protected _amazon: AmazonClient | undefined;
+    protected _appStore: AppStoreClient | undefined;
+    protected _baidu: BaiduClient | undefined;
+    protected _bing: BingClient | undefined;
+    protected _chatgpt: ChatgptClient | undefined;
+    protected _daum: DaumClient | undefined;
+    protected _duckduckgo: DuckduckgoClient | undefined;
+    protected _gemini: GeminiClient | undefined;
+    protected _google: GoogleClient | undefined;
+    protected _googleAiMode: GoogleAiModeClient | undefined;
+    protected _googleAio: GoogleAioClient | undefined;
+    protected _googlePlay: GooglePlayClient | undefined;
+    protected _googleShopping: GoogleShoppingClient | undefined;
+    protected _googleTrends: GoogleTrendsClient | undefined;
     protected _instagram: InstagramClient | undefined;
     protected _linkedin: LinkedinClient | undefined;
+    protected _naver: NaverClient | undefined;
+    protected _naverAiBrief: NaverAiBriefClient | undefined;
+    protected _naverAiTab: NaverAiTabClient | undefined;
     protected _reddit: RedditClient | undefined;
+    protected _seznam: SeznamClient | undefined;
     protected _shopify: ShopifyClient | undefined;
+    protected _sogou: SogouClient | undefined;
     protected _threads: ThreadsClient | undefined;
     protected _tiktok: TiktokClient | undefined;
     protected _tiktokshop: TiktokshopClient | undefined;
+    protected _tripadvisor: TripadvisorClient | undefined;
     protected _walmart: WalmartClient | undefined;
     protected _x: XClient | undefined;
+    protected _yahoo: YahooClient | undefined;
+    protected _yahooJapan: YahooJapanClient | undefined;
+    protected _yandex: YandexClient | undefined;
     protected _youtube: YoutubeClient | undefined;
     protected _marketplaces: MarketplacesClient | undefined;
     protected _imageTranslate: ImageTranslateClient | undefined;
@@ -53,6 +97,58 @@ export class ApinoaClient {
         return (this._amazon ??= new AmazonClient(this._options));
     }
 
+    public get appStore(): AppStoreClient {
+        return (this._appStore ??= new AppStoreClient(this._options));
+    }
+
+    public get baidu(): BaiduClient {
+        return (this._baidu ??= new BaiduClient(this._options));
+    }
+
+    public get bing(): BingClient {
+        return (this._bing ??= new BingClient(this._options));
+    }
+
+    public get chatgpt(): ChatgptClient {
+        return (this._chatgpt ??= new ChatgptClient(this._options));
+    }
+
+    public get daum(): DaumClient {
+        return (this._daum ??= new DaumClient(this._options));
+    }
+
+    public get duckduckgo(): DuckduckgoClient {
+        return (this._duckduckgo ??= new DuckduckgoClient(this._options));
+    }
+
+    public get gemini(): GeminiClient {
+        return (this._gemini ??= new GeminiClient(this._options));
+    }
+
+    public get google(): GoogleClient {
+        return (this._google ??= new GoogleClient(this._options));
+    }
+
+    public get googleAiMode(): GoogleAiModeClient {
+        return (this._googleAiMode ??= new GoogleAiModeClient(this._options));
+    }
+
+    public get googleAio(): GoogleAioClient {
+        return (this._googleAio ??= new GoogleAioClient(this._options));
+    }
+
+    public get googlePlay(): GooglePlayClient {
+        return (this._googlePlay ??= new GooglePlayClient(this._options));
+    }
+
+    public get googleShopping(): GoogleShoppingClient {
+        return (this._googleShopping ??= new GoogleShoppingClient(this._options));
+    }
+
+    public get googleTrends(): GoogleTrendsClient {
+        return (this._googleTrends ??= new GoogleTrendsClient(this._options));
+    }
+
     public get instagram(): InstagramClient {
         return (this._instagram ??= new InstagramClient(this._options));
     }
@@ -61,12 +157,32 @@ export class ApinoaClient {
         return (this._linkedin ??= new LinkedinClient(this._options));
     }
 
+    public get naver(): NaverClient {
+        return (this._naver ??= new NaverClient(this._options));
+    }
+
+    public get naverAiBrief(): NaverAiBriefClient {
+        return (this._naverAiBrief ??= new NaverAiBriefClient(this._options));
+    }
+
+    public get naverAiTab(): NaverAiTabClient {
+        return (this._naverAiTab ??= new NaverAiTabClient(this._options));
+    }
+
     public get reddit(): RedditClient {
         return (this._reddit ??= new RedditClient(this._options));
     }
 
+    public get seznam(): SeznamClient {
+        return (this._seznam ??= new SeznamClient(this._options));
+    }
+
     public get shopify(): ShopifyClient {
         return (this._shopify ??= new ShopifyClient(this._options));
+    }
+
+    public get sogou(): SogouClient {
+        return (this._sogou ??= new SogouClient(this._options));
     }
 
     public get threads(): ThreadsClient {
@@ -81,12 +197,28 @@ export class ApinoaClient {
         return (this._tiktokshop ??= new TiktokshopClient(this._options));
     }
 
+    public get tripadvisor(): TripadvisorClient {
+        return (this._tripadvisor ??= new TripadvisorClient(this._options));
+    }
+
     public get walmart(): WalmartClient {
         return (this._walmart ??= new WalmartClient(this._options));
     }
 
     public get x(): XClient {
         return (this._x ??= new XClient(this._options));
+    }
+
+    public get yahoo(): YahooClient {
+        return (this._yahoo ??= new YahooClient(this._options));
+    }
+
+    public get yahooJapan(): YahooJapanClient {
+        return (this._yahooJapan ??= new YahooJapanClient(this._options));
+    }
+
+    public get yandex(): YandexClient {
+        return (this._yandex ??= new YandexClient(this._options));
     }
 
     public get youtube(): YoutubeClient {
