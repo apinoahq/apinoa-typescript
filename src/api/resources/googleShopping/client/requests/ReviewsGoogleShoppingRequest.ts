@@ -5,7 +5,7 @@
  *     {}
  */
 export interface ReviewsGoogleShoppingRequest {
-    /** The product, as a search item's `id` carries it. */
+    /** The product, as a search item's `id` carries it. Only a product Google groups across stores (an id of digits only) has reviews. */
     id?: string;
     /** A Google Shopping product link instead of `id` (the `url` a search item carries). */
     url?: string;
