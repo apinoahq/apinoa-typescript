@@ -1,8 +1,10 @@
 # @apinoa/sdk
 
 The official TypeScript and JavaScript SDK for [apinoa](https://apinoa.com): product data from Amazon,
-Walmart, Shopify, TikTok Shop and AliExpress, social data from TikTok, YouTube, Instagram, Threads, X,
-Reddit and LinkedIn, and image translation, through one API.
+Walmart, Shopify, TikTok Shop and AliExpress; posts, profiles and comments from TikTok, YouTube, Instagram,
+Threads, X, Reddit and LinkedIn; search results from Google, Bing, Naver and 13 more search engines; AI
+answers from ChatGPT, Gemini, Google AI Overviews, Google AI Mode and Naver; and image translation, through
+one API.
 
 ```sh
 npm install @apinoa/sdk
@@ -48,6 +50,29 @@ platform has under `ext`.
 const creator = await apinoa.tiktok.profile({ username: "khaby.lame" });
 const page = await apinoa.reddit.posts({ community: "typescript" });
 const next = await apinoa.reddit.posts({ cursor: page.data.cursor }); // the next page: the cursor alone
+```
+
+### Search engines
+
+Every search engine answers in one results-page schema: Google, Bing, Naver, Baidu, Yandex, Yahoo and the
+rest return the same `items`.
+
+```ts
+const { data } = await apinoa.google.search({ q: "trail running shoes", country: "US" });
+for (const item of data.items) if (item.type === "organic") console.log(item.position, item.title, item.url);
+const naver = await apinoa.naver.search({ q: "러닝화 추천" });
+```
+
+### AI answers
+
+What ChatGPT, Gemini, Google AI Overviews, Google AI Mode and Naver answer to a prompt, with its citations,
+sources and the brands it names, in one `Answer` type.
+
+```ts
+const { data } = await apinoa.chatgpt.answer({ prompt: "Best running shoes for beginners?", country: "US" });
+console.log(data.text);
+for (const s of data.sources) if (s.cited) console.log(s.url);
+const aio = await apinoa.googleAio.answer({ prompt: "best running shoes for beginners" });
 ```
 
 ### Image translation

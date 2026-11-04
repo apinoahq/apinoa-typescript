@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.6
+
+- The README now covers every family the SDK reaches: search engines (`apinoa.google.search`, `apinoa.naver.search`, …) and AI answers (`apinoa.chatgpt.answer`, `apinoa.googleAio.answer`, …), next to marketplaces and social platforms.
+- The package description and keywords name search results and AI answers.
+
 ## 0.1.5
 
 Follows the API as of 2026-10-30:

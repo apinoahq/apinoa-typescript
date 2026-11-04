@@ -1,7 +1,7 @@
 {
   "name": "@apinoa/sdk",
-  "version": "0.1.5",
-  "description": "Official TypeScript/JavaScript SDK for the apinoa API: marketplace, social and image-translation data through one API.",
+  "version": "0.1.6",
+  "description": "Official TypeScript/JavaScript SDK for the apinoa API: marketplace products, social posts, search results and AI answers, plus image translation, through one API.",
   "license": "MIT",
   "homepage": "https://apinoa.com/docs",
   "repository": {
@@ -21,7 +21,22 @@
     "instagram",
     "scraping",
     "api",
-    "sdk"
+    "sdk",
+    "serp",
+    "search-api",
+    "google",
+    "bing",
+    "naver",
+    "ai-answers",
+    "chatgpt",
+    "gemini",
+    "ai-overviews",
+    "tiktokshop",
+    "x",
+    "threads",
+    "linkedin",
+    "social-media",
+    "web-scraping"
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
