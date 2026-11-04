@@ -36,7 +36,7 @@ is `apinoa.tiktokshop.product(...)`. Every answer is `{ success, data, requestId
 Every marketplace answers in one commerce schema: a `Product` from Amazon reads like one from Shopify.
 
 ```ts
-const product = await apinoa.walmart.product({ id: "5089499913" });
+const product = await apinoa.walmart.product({ id: "18256507800" });
 const reviews = await apinoa.shopify.reviews({ id: "allbirds.com/products/mens-tree-runners" });
 const tree = await apinoa.amazon.categories({});
 ```
@@ -119,6 +119,11 @@ translation under load can take minutes; set `timeoutInSeconds` lower for the da
 const apinoa = new ApinoaClient({ maxRetries: 4, timeoutInSeconds: 60 });
 await apinoa.tiktok.posts({ username: "nasa" }, { maxRetries: 0, abortSignal: AbortSignal.timeout(10_000) });
 ```
+
+## Examples
+
+[`examples/`](./examples) holds four small programs to copy and adapt: a price tracker, a rank tracker,
+social listening and an AI-answer monitor. Each is one file that runs with `npx tsx`.
 
 ## Reference
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.7
+
+- `examples/`: four programs to copy and adapt, each one file that runs with `npx tsx`: a price tracker
+  (Amazon, Walmart, Shopify, AliExpress, TikTok Shop), a rank tracker (Google, Bing, DuckDuckGo, Naver),
+  social listening (Reddit, Threads, YouTube) and an AI-answer monitor (ChatGPT, Gemini, Google AI
+  Overviews, AI Mode).
+- The README's Walmart example uses a product that is listed; the old id answered `404 PRODUCT_NOT_FOUND`.
+
 ## 0.1.6
 
 - The README now covers every family the SDK reaches: search engines (`apinoa.google.search`, `apinoa.naver.search`, …) and AI answers (`apinoa.chatgpt.answer`, `apinoa.googleAio.answer`, …), next to marketplaces and social platforms.

@@ -1,0 +1,20 @@
+{
+  "name": "apinoa-examples",
+  "private": true,
+  "type": "module",
+  "description": "Templates that use @apinoa/sdk: a price tracker, a rank tracker, social listening and an AI-answer monitor.",
+  "scripts": {
+    "price-tracker": "tsx price-tracker.ts",
+    "rank-tracker": "tsx rank-tracker.ts",
+    "social-listening": "tsx social-listening.ts",
+    "ai-answer-monitor": "tsx ai-answer-monitor.ts"
+  },
+  "dependencies": {
+    "@apinoa/sdk": "^0.1.6"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
