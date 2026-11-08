@@ -470,9 +470,10 @@ export class WalmartClient {
         request: Apinoa.ProductWalmartRequest,
         requestOptions?: WalmartClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.ProductResponse>> {
-        const { id, region } = request;
+        const { id, seller, region } = request;
         const _queryParams: Record<string, unknown> = {
             id,
+            seller,
             region,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();

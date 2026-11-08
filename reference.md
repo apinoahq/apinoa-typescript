@@ -1231,6 +1231,138 @@ await client.chatgpt.answer({
 </dl>
 </details>
 
+## Company
+<details><summary><code>client.company.<a href="/src/api/resources/company/client/Client.ts">technologies</a>({ ...params }) -> Apinoa.TechnologiesResultResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `TechnologiesResult` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/company/technologies
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.company.technologies({
+    domain: "domain"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.TechnologiesCompanyRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `CompanyClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## Copilot
+<details><summary><code>client.copilot.<a href="/src/api/resources/copilot/client/Client.ts">answer</a>({ ...params }) -> Apinoa.AnswerResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/copilot/answer
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.copilot.answer({
+    prompt: "prompt"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AnswerCopilotRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `CopilotClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Daum
 <details><summary><code>client.daum.<a href="/src/api/resources/daum/client/Client.ts">search</a>({ ...params }) -> Apinoa.ResultsPageResponse</code></summary>
 <dl>
@@ -1478,6 +1610,133 @@ await client.duckduckgo.suggestions({
 <dd>
 
 **requestOptions:** `DuckduckgoClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## Facebook
+<details><summary><code>client.facebook.<a href="/src/api/resources/facebook/client/Client.ts">profile</a>({ ...params }) -> Apinoa.AccountResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Account` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/facebook/profile
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.facebook.profile();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.ProfileFacebookRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `FacebookClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.facebook.<a href="/src/api/resources/facebook/client/Client.ts">ads</a>({ ...params }) -> Apinoa.FacebookAdsPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `FacebookAdsPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/facebook/ads
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.facebook.ads();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdsFacebookRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `FacebookClient.RequestOptions` 
     
 </dd>
 </dl>
@@ -3223,7 +3482,7 @@ await client.linkedin.job();
 <dl>
 <dd>
 
-Returns `JobPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/linkedin/jobs
+Returns `JobPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/linkedin/jobs
 </dd>
 </dl>
 </dd>

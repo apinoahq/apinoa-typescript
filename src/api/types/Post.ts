@@ -41,6 +41,7 @@ export namespace Post {
         Instagram: "instagram",
         Threads: "threads",
         X: "x",
+        Facebook: "facebook",
     } as const;
     export type Platform = (typeof Platform)[keyof typeof Platform];
 

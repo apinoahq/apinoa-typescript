@@ -6,8 +6,11 @@ import { AppStoreClient } from "./api/resources/appStore/client/Client.js";
 import { BaiduClient } from "./api/resources/baidu/client/Client.js";
 import { BingClient } from "./api/resources/bing/client/Client.js";
 import { ChatgptClient } from "./api/resources/chatgpt/client/Client.js";
+import { CompanyClient } from "./api/resources/company/client/Client.js";
+import { CopilotClient } from "./api/resources/copilot/client/Client.js";
 import { DaumClient } from "./api/resources/daum/client/Client.js";
 import { DuckduckgoClient } from "./api/resources/duckduckgo/client/Client.js";
+import { FacebookClient } from "./api/resources/facebook/client/Client.js";
 import { GeminiClient } from "./api/resources/gemini/client/Client.js";
 import { GoogleClient } from "./api/resources/google/client/Client.js";
 import { GoogleAiModeClient } from "./api/resources/googleAiMode/client/Client.js";
@@ -54,8 +57,11 @@ export class ApinoaClient {
     protected _baidu: BaiduClient | undefined;
     protected _bing: BingClient | undefined;
     protected _chatgpt: ChatgptClient | undefined;
+    protected _company: CompanyClient | undefined;
+    protected _copilot: CopilotClient | undefined;
     protected _daum: DaumClient | undefined;
     protected _duckduckgo: DuckduckgoClient | undefined;
+    protected _facebook: FacebookClient | undefined;
     protected _gemini: GeminiClient | undefined;
     protected _google: GoogleClient | undefined;
     protected _googleAiMode: GoogleAiModeClient | undefined;
@@ -113,12 +119,24 @@ export class ApinoaClient {
         return (this._chatgpt ??= new ChatgptClient(this._options));
     }
 
+    public get company(): CompanyClient {
+        return (this._company ??= new CompanyClient(this._options));
+    }
+
+    public get copilot(): CopilotClient {
+        return (this._copilot ??= new CopilotClient(this._options));
+    }
+
     public get daum(): DaumClient {
         return (this._daum ??= new DaumClient(this._options));
     }
 
     public get duckduckgo(): DuckduckgoClient {
         return (this._duckduckgo ??= new DuckduckgoClient(this._options));
+    }
+
+    public get facebook(): FacebookClient {
+        return (this._facebook ??= new FacebookClient(this._options));
     }
 
     public get gemini(): GeminiClient {

@@ -7,6 +7,8 @@
 export interface JobsLinkedinRequest {
     /** Job search keywords (e.g. software engineer). */
     query?: string;
+    /** Only this company's jobs: its vanity name (e.g. stripe), its company URL, or its numeric LinkedIn company id. */
+    company?: string;
     /** Location name (e.g. United States). Default: worldwide. */
     location?: string;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */

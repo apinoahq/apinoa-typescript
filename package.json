@@ -1,6 +1,6 @@
 {
   "name": "@apinoa/sdk",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Official TypeScript/JavaScript SDK for the apinoa API: marketplace products, social posts, search results and AI answers, plus image translation, through one API.",
   "license": "MIT",
   "homepage": "https://apinoa.com/docs",
