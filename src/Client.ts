@@ -25,6 +25,7 @@ import { MarketplacesClient } from "./api/resources/marketplaces/client/Client.j
 import { NaverClient } from "./api/resources/naver/client/Client.js";
 import { NaverAiBriefClient } from "./api/resources/naverAiBrief/client/Client.js";
 import { NaverAiTabClient } from "./api/resources/naverAiTab/client/Client.js";
+import { OcrClient } from "./api/resources/ocr/client/Client.js";
 import { RedditClient } from "./api/resources/reddit/client/Client.js";
 import { SeznamClient } from "./api/resources/seznam/client/Client.js";
 import { ShopifyClient } from "./api/resources/shopify/client/Client.js";
@@ -90,6 +91,7 @@ export class ApinoaClient {
     protected _youtube: YoutubeClient | undefined;
     protected _marketplaces: MarketplacesClient | undefined;
     protected _imageTranslate: ImageTranslateClient | undefined;
+    protected _ocr: OcrClient | undefined;
 
     constructor(options: ApinoaClient.Options = {}) {
         this._options = normalizeClientOptionsWithAuth(options);
@@ -249,6 +251,10 @@ export class ApinoaClient {
 
     public get imageTranslate(): ImageTranslateClient {
         return (this._imageTranslate ??= new ImageTranslateClient(this._options));
+    }
+
+    public get ocr(): OcrClient {
+        return (this._ocr ??= new OcrClient(this._options));
     }
 
     /**

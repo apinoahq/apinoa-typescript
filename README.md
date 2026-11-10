@@ -90,6 +90,17 @@ await writeFile("translated.jpg", Buffer.from(await image.arrayBuffer()));
 With `render: false` the body is JSON (the cleaned image and every text region): read it with
 `JSON.parse(await image.text())`.
 
+### OCR
+
+```ts
+import { readFile } from "node:fs/promises";
+
+const { data } = await apinoa.ocr.read(await readFile("product.jpg"), {});
+for (const region of data?.regions ?? []) console.log(region.text, region.confidence);
+```
+
+`language` (`zh-CN`, `zh-TW`, `ja`, `en`) keeps only the text in that language; the default, `auto`, returns all of it.
+
 ## Errors
 
 A failed call throws a subclass of `ApinoaError` named after its status (`BadRequestError`,

@@ -115,6 +115,24 @@ test("image translation uploads raw bytes with the languages in the query, and r
   assert.equal(out.rawResponse.headers.get("x-apinoa-regions-count"), "2");
 });
 
+test("OCR uploads raw bytes, sends the language only when given, and returns the regions", async () => {
+  const png = Buffer.from([0x89, 0x50, 0x4e, 0x47, 1, 2, 3]);
+  const body = { success: true, data: { regions: [{ index: 0, text: "限时特价", confidence: 0.99 }], regions_found: 1, src_w: 750, src_h: 750 } };
+  fresh(() => [200, body]);
+  const res = await client().ocr.read(png, {});
+  let [call] = seen;
+  assert.equal(call.method, "POST");
+  assert.equal(call.url.pathname, "/v1/ocr");
+  assert.equal(call.url.searchParams.has("language"), false);
+  assert.deepEqual([...call.body], [...png]);
+  assert.equal(res.data.regions[0].text, "限时特价");
+
+  fresh(() => [200, body]);
+  await client().ocr.read(png, { language: "ja" });
+  [call] = seen;
+  assert.equal(call.url.searchParams.get("language"), "ja");
+});
+
 test("the catalog is listed without a key", async () => {
   fresh(() => [200, { success: true, data: { marketplaces: [{ id: "walmart", kind: "marketplace", operations: ["search"] }] } }]);
   const res = await client().marketplaces.list();

@@ -16,7 +16,7 @@ export declare namespace ImageTranslateClient {
 }
 
 /**
- * Translate or read the text inside a product image.
+ * Translate the text inside a product image.
  */
 export class ImageTranslateClient {
     protected readonly _options: NormalizedClientOptionsWithAuth<ImageTranslateClient.Options>;
@@ -165,7 +165,9 @@ export class ImageTranslateClient {
     }
 
     /**
-     * Detects every text region without translating. Reference: https://apinoa.com/docs/api-reference/image-translate/ocr
+     * @deprecated
+     *
+     * The OCR API's old address: the same call as POST /v1/ocr, at the same price. Use POST /v1/ocr. Reference: https://apinoa.com/docs/api-reference/ocr
      *
      * @param {core.file.Uploadable} uploadable
      * @param {Apinoa.OcrImageTranslateRequest} request

@@ -7993,3 +7993,4 @@ await client.imageTranslate.supportedFonts();
 </dl>
 </details>
 
+## OCR
