@@ -580,10 +580,11 @@ export class InstagramClient {
         request: Apinoa.GroupInstagramRequest = {},
         requestOptions?: InstagramClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.GroupResponse>> {
-        const { hashtag, location, include } = request;
+        const { hashtag, location, sound, include } = request;
         const _queryParams: Record<string, unknown> = {
             hashtag,
             location,
+            sound,
             include,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
