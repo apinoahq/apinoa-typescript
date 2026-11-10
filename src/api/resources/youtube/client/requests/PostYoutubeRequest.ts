@@ -7,4 +7,6 @@
 export interface PostYoutubeRequest {
     /** Video id (11 chars), or the video URL (watch?v=…, youtu.be/…, /shorts/…). */
     id?: string;
+    /** watch: also read the watch page — the channel's subscriber count (author.counts.followers), the comment count (metrics.comments, abbreviated as the page shows it; comments gives the exact total), the description's #hashtags / @mentions / links (entities), chapters and the song (+1 unit). */
+    include?: string | string[];
 }
