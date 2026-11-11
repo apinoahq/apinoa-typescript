@@ -551,7 +551,7 @@ export class YoutubeClient {
     }
 
     /**
-     * Returns `CommentPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/comments
+     * Returns `CommentPage` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/youtube/comments
      *
      * @param {Apinoa.CommentsYoutubeRequest} request
      * @param {YoutubeClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -583,10 +583,11 @@ export class YoutubeClient {
         request: Apinoa.CommentsYoutubeRequest = {},
         requestOptions?: YoutubeClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.CommentPageResponse>> {
-        const { post, comment, cursor } = request;
+        const { post, comment, sort, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             post,
             comment,
+            sort: sort != null ? sort : undefined,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
