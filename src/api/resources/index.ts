@@ -30,6 +30,8 @@ export * from "./duckduckgo/types/index.js";
 export * from "./facebook/client/requests/index.js";
 export * as facebook from "./facebook/index.js";
 export * from "./facebook/types/index.js";
+export * from "./feedback/client/requests/index.js";
+export * as feedback from "./feedback/index.js";
 export * from "./gemini/client/requests/index.js";
 export * as gemini from "./gemini/index.js";
 export * from "./google/client/requests/index.js";

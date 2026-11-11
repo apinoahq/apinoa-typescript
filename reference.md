@@ -8060,3 +8060,135 @@ await client.imageTranslate.supportedFonts();
 </details>
 
 ## OCR
+## Feedback
+<details><summary><code>client.feedback.<a href="/src/api/resources/feedback/client/Client.ts">send</a>({ ...params }) -> Apinoa.FeedbackReceiptResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Tell us something is wrong or missing, or ask for something new. Free, and works without an API key; send your key and the report is linked to your account, so we can look at the call you name in requestId. For a problem, include platform, operation, the params you sent and the requestId of the response; for wrong or missing data, also what you received and what you expected (or a url that shows it). For a feature request, describe what you need in message. Give contact to get our reply by email; the reply and status are also at GET /v1/feedback/{id}. Sending the same message again within a day returns the first report (200) rather than a new one (201). Reference: https://apinoa.com/docs/api-reference/feedback
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.feedback.send({
+    type: "feature_request",
+    message: "message"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.FeedbackInput` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `FeedbackClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.feedback.<a href="/src/api/resources/feedback/client/Client.ts">get</a>({ ...params }) -> Apinoa.FeedbackStatusResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+The status of a report and our reply, for anyone holding its id. Nothing you sent is returned. Free. Reference: https://apinoa.com/docs/api-reference/feedback
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.feedback.get({
+    id: "id"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.GetFeedbackRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `FeedbackClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+

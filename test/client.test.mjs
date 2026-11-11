@@ -144,3 +144,41 @@ test("the CommonJS build loads and exposes the same client", () => {
   const cjs = require("../dist/cjs/index.js");
   assert.equal(typeof cjs.ApinoaClient, "function");
 });
+
+test("feedback goes out with no key from a client built with auth: false", async () => {
+  fresh(() => [201, { success: true, data: { id: "fb_0123456789abcdef0123456789abcdef", status: "received", createdAt: "2026-11-11T10:00:00Z" } }]);
+  delete process.env.APINOA_API_KEY;
+  const res = await new ApinoaClient({ auth: false, baseUrl }).feedback.send({
+    type: "wrong_data",
+    message: "price is the list price, not the sale price",
+    platform: "amazon",
+    operation: "product",
+    params: { asin: "B0" },
+  });
+  const [call] = seen;
+  assert.equal(call.method, "POST");
+  assert.equal(call.url.pathname, "/v1/feedback");
+  assert.equal(call.headers["x-api-key"], undefined);
+  assert.deepEqual(JSON.parse(call.body.toString()), {
+    type: "wrong_data",
+    message: "price is the list price, not the sale price",
+    platform: "amazon",
+    operation: "product",
+    params: { asin: "B0" },
+  });
+  assert.equal(res.data.status, "received");
+});
+
+test("feedback sent with a key carries it, so the report is linked to the account", async () => {
+  fresh(() => [201, { success: true, data: { id: "fb_0123456789abcdef0123456789abcdef", status: "received", createdAt: "2026-11-11T10:00:00Z" } }]);
+  await client().feedback.send({ type: "feature_request", message: "Etsy, please" });
+  assert.equal(seen[0].headers["x-api-key"], "ak_test");
+});
+
+test("feedback.get reads a report's status and reply by its id", async () => {
+  fresh(() => [200, { success: true, data: { id: "fb_0123456789abcdef0123456789abcdef", type: "error", status: "resolved", reply: "Fixed.", repliedAt: "2026-11-11T12:00:00Z", createdAt: "2026-11-11T10:00:00Z", updatedAt: "2026-11-11T12:00:00Z" } }]);
+  const res = await new ApinoaClient({ auth: false, baseUrl }).feedback.get({ id: "fb_0123456789abcdef0123456789abcdef" });
+  assert.equal(seen[0].method, "GET");
+  assert.equal(seen[0].url.pathname, "/v1/feedback/fb_0123456789abcdef0123456789abcdef");
+  assert.equal(res.data.reply, "Fixed.");
+});

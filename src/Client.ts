@@ -12,6 +12,7 @@ import { DaumClient } from "./api/resources/daum/client/Client.js";
 import { DolaClient } from "./api/resources/dola/client/Client.js";
 import { DuckduckgoClient } from "./api/resources/duckduckgo/client/Client.js";
 import { FacebookClient } from "./api/resources/facebook/client/Client.js";
+import { FeedbackClient } from "./api/resources/feedback/client/Client.js";
 import { GeminiClient } from "./api/resources/gemini/client/Client.js";
 import { GoogleClient } from "./api/resources/google/client/Client.js";
 import { GoogleAiModeClient } from "./api/resources/googleAiMode/client/Client.js";
@@ -94,6 +95,7 @@ export class ApinoaClient {
     protected _marketplaces: MarketplacesClient | undefined;
     protected _imageTranslate: ImageTranslateClient | undefined;
     protected _ocr: OcrClient | undefined;
+    protected _feedback: FeedbackClient | undefined;
 
     constructor(options: ApinoaClient.Options = {}) {
         this._options = normalizeClientOptionsWithAuth(options);
@@ -261,6 +263,10 @@ export class ApinoaClient {
 
     public get ocr(): OcrClient {
         return (this._ocr ??= new OcrClient(this._options));
+    }
+
+    public get feedback(): FeedbackClient {
+        return (this._feedback ??= new FeedbackClient(this._options));
     }
 
     /**
