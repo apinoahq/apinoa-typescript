@@ -797,7 +797,7 @@ export class LinkedinClient {
     }
 
     /**
-     * Returns `JobPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/linkedin/jobs
+     * Returns `JobPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/linkedin/jobs
      *
      * @param {Apinoa.JobsLinkedinRequest} request
      * @param {LinkedinClient.RequestOptions} requestOptions - Request-specific configuration.

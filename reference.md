@@ -3482,7 +3482,7 @@ await client.linkedin.job();
 <dl>
 <dd>
 
-Returns `JobPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/linkedin/jobs
+Returns `JobPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/linkedin/jobs
 </dd>
 </dl>
 </dd>
@@ -5341,7 +5341,7 @@ await client.tiktok.profile();
 <dl>
 <dd>
 
-Returns `AccountPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/tiktok/profiles
+Returns `AccountPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok/profiles
 </dd>
 </dl>
 </dd>
@@ -5467,7 +5467,7 @@ await client.tiktok.post();
 <dl>
 <dd>
 
-Returns `PostPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/tiktok/posts
+Returns `PostPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok/posts
 </dd>
 </dl>
 </dd>
@@ -5656,7 +5656,7 @@ await client.tiktok.group();
 <dl>
 <dd>
 
-Returns `GroupPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/tiktok/groups
+Returns `GroupPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok/groups
 </dd>
 </dl>
 </dd>
@@ -6812,7 +6812,7 @@ await client.x.post();
 <dl>
 <dd>
 
-Returns `PostPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/x/posts
+Returns `PostPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/x/posts
 </dd>
 </dl>
 </dd>
@@ -7515,7 +7515,7 @@ await client.yandex.reviews();
 <dl>
 <dd>
 
-Returns `Account` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/youtube/profile
+Returns `Account` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/profile
 </dd>
 </dl>
 </dd>
@@ -7704,7 +7704,7 @@ await client.youtube.post();
 <dl>
 <dd>
 
-Returns `PostPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/posts
+Returns `PostPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/posts
 </dd>
 </dl>
 </dd>
@@ -7767,7 +7767,7 @@ await client.youtube.posts();
 <dl>
 <dd>
 
-Returns `CommentPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/comments
+Returns `CommentPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/comments
 </dd>
 </dl>
 </dd>
@@ -7830,7 +7830,7 @@ await client.youtube.comments();
 <dl>
 <dd>
 
-Returns `GroupPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/groups
+Returns `GroupPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/groups
 </dd>
 </dl>
 </dd>

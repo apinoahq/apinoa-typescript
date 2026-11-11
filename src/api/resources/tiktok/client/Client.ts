@@ -154,7 +154,7 @@ export class TiktokClient {
     }
 
     /**
-     * Returns `AccountPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/tiktok/profiles
+     * Returns `AccountPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok/profiles
      *
      * @param {Apinoa.ProfilesTiktokRequest} request
      * @param {TiktokClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -414,7 +414,7 @@ export class TiktokClient {
     }
 
     /**
-     * Returns `PostPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/tiktok/posts
+     * Returns `PostPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok/posts
      *
      * @param {Apinoa.PostsTiktokRequest} request
      * @param {TiktokClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -810,7 +810,7 @@ export class TiktokClient {
     }
 
     /**
-     * Returns `GroupPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/tiktok/groups
+     * Returns `GroupPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok/groups
      *
      * @param {Apinoa.GroupsTiktokRequest} request
      * @param {TiktokClient.RequestOptions} requestOptions - Request-specific configuration.

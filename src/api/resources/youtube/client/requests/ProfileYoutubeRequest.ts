@@ -9,6 +9,6 @@ export interface ProfileYoutubeRequest {
     username?: string;
     /** Channel id (UC…). */
     userId?: string;
-    /** about: also read the channel's About panel — join date (createdAt), exact video count, total views, country and every link (+1 unit). */
+    /** Deprecated, accepted and ignored: the About panel — join date (createdAt), exact video count, total views, country and every link — is always read. */
     include?: string | string[];
 }

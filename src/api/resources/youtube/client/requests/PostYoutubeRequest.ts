@@ -7,6 +7,6 @@
 export interface PostYoutubeRequest {
     /** Video id (11 chars), or the video URL (watch?v=…, youtu.be/…, /shorts/…). */
     id?: string;
-    /** watch: the watch page's reading — the channel's subscriber count (author.counts.followers), the comment count (metrics.comments, abbreviated as the page shows it; comments gives the exact total), the description's #hashtags / @mentions / links (entities), chapters and the song. Always included now; the value is accepted so existing calls keep working. */
+    /** watch: the watch page's reading — the channel's subscriber count (author.counts.followers), the comment count (metrics.comments, abbreviated as the page shows it; comments gives the exact total), the description's #hashtags / @mentions / links (entities), chapters and the song. Deprecated, accepted and ignored: always included. */
     include?: string | string[];
 }

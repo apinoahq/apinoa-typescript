@@ -282,7 +282,7 @@ export class XClient {
     }
 
     /**
-     * Returns `PostPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/x/posts
+     * Returns `PostPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/x/posts
      *
      * @param {Apinoa.PostsXRequest} request
      * @param {XClient.RequestOptions} requestOptions - Request-specific configuration.

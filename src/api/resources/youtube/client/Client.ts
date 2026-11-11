@@ -26,7 +26,7 @@ export class YoutubeClient {
     }
 
     /**
-     * Returns `Account` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/youtube/profile
+     * Returns `Account` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/profile
      *
      * @param {Apinoa.ProfileYoutubeRequest} request
      * @param {YoutubeClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -416,7 +416,7 @@ export class YoutubeClient {
     }
 
     /**
-     * Returns `PostPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/posts
+     * Returns `PostPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/posts
      *
      * @param {Apinoa.PostsYoutubeRequest} request
      * @param {YoutubeClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -551,7 +551,7 @@ export class YoutubeClient {
     }
 
     /**
-     * Returns `CommentPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/comments
+     * Returns `CommentPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/comments
      *
      * @param {Apinoa.CommentsYoutubeRequest} request
      * @param {YoutubeClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -682,7 +682,7 @@ export class YoutubeClient {
     }
 
     /**
-     * Returns `GroupPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/groups
+     * Returns `GroupPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/groups
      *
      * @param {Apinoa.GroupsYoutubeRequest} request
      * @param {YoutubeClient.RequestOptions} requestOptions - Request-specific configuration.
