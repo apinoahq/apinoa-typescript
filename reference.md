@@ -2788,7 +2788,7 @@ await client.instagram.profile();
 <dl>
 <dd>
 
-Returns `Post` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/instagram/post
+Returns `Post` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/instagram/post
 </dd>
 </dl>
 </dd>
@@ -7641,7 +7641,7 @@ await client.youtube.profiles();
 <dl>
 <dd>
 
-Returns `Post` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/post
+Returns `Post` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/post
 </dd>
 </dl>
 </dd>
@@ -7767,7 +7767,7 @@ await client.youtube.posts();
 <dl>
 <dd>
 
-Returns `CommentPage` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/youtube/comments
+Returns `CommentPage` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/comments
 </dd>
 </dl>
 </dd>

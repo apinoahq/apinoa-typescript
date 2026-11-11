@@ -11,7 +11,7 @@ export interface CommentsYoutubeRequest {
     post?: string;
     /** A comment's replies: the comment's `moreReplies.cursor`. */
     comment?: string;
-    /** post: top (default — YouTube's most-liked first, with each comment's likes) or recent (newest first, +1 unit). First page only; the cursor keeps its order. */
+    /** post: top (default — YouTube's most-liked first, with each comment's likes) or recent (newest first). First page only; the cursor keeps its order. */
     sort?: Apinoa.CommentsYoutubeRequestSort;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;

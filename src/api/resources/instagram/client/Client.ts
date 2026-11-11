@@ -156,7 +156,7 @@ export class InstagramClient {
     }
 
     /**
-     * Returns `Post` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/instagram/post
+     * Returns `Post` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/instagram/post
      *
      * @param {Apinoa.PostInstagramRequest} request
      * @param {InstagramClient.RequestOptions} requestOptions - Request-specific configuration.
