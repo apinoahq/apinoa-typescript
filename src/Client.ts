@@ -9,6 +9,7 @@ import { ChatgptClient } from "./api/resources/chatgpt/client/Client.js";
 import { CompanyClient } from "./api/resources/company/client/Client.js";
 import { CopilotClient } from "./api/resources/copilot/client/Client.js";
 import { DaumClient } from "./api/resources/daum/client/Client.js";
+import { DolaClient } from "./api/resources/dola/client/Client.js";
 import { DuckduckgoClient } from "./api/resources/duckduckgo/client/Client.js";
 import { FacebookClient } from "./api/resources/facebook/client/Client.js";
 import { GeminiClient } from "./api/resources/gemini/client/Client.js";
@@ -61,6 +62,7 @@ export class ApinoaClient {
     protected _company: CompanyClient | undefined;
     protected _copilot: CopilotClient | undefined;
     protected _daum: DaumClient | undefined;
+    protected _dola: DolaClient | undefined;
     protected _duckduckgo: DuckduckgoClient | undefined;
     protected _facebook: FacebookClient | undefined;
     protected _gemini: GeminiClient | undefined;
@@ -131,6 +133,10 @@ export class ApinoaClient {
 
     public get daum(): DaumClient {
         return (this._daum ??= new DaumClient(this._options));
+    }
+
+    public get dola(): DolaClient {
+        return (this._dola ??= new DolaClient(this._options));
     }
 
     public get duckduckgo(): DuckduckgoClient {

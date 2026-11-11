@@ -22,6 +22,8 @@ export * as copilot from "./copilot/index.js";
 export * from "./daum/client/requests/index.js";
 export * as daum from "./daum/index.js";
 export * from "./daum/types/index.js";
+export * from "./dola/client/requests/index.js";
+export * as dola from "./dola/index.js";
 export * from "./duckduckgo/client/requests/index.js";
 export * as duckduckgo from "./duckduckgo/index.js";
 export * from "./duckduckgo/types/index.js";
