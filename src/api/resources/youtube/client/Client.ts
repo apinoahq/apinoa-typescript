@@ -58,11 +58,10 @@ export class YoutubeClient {
         request: Apinoa.ProfileYoutubeRequest = {},
         requestOptions?: YoutubeClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.AccountResponse>> {
-        const { username, userId, include } = request;
+        const { username, userId } = request;
         const _queryParams: Record<string, unknown> = {
             username,
             userId,
-            include,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(
@@ -82,7 +81,6 @@ export class YoutubeClient {
             queryString: core.url
                 .queryBuilder()
                 .addMany(_queryParams)
-                .add("include", _queryParams.include, { style: "comma" })
                 .mergeAdditional(requestOptions?.queryParams)
                 .build(),
             timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,
@@ -318,10 +316,9 @@ export class YoutubeClient {
         request: Apinoa.PostYoutubeRequest = {},
         requestOptions?: YoutubeClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PostResponse>> {
-        const { id, include } = request;
+        const { id } = request;
         const _queryParams: Record<string, unknown> = {
             id,
-            include,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(
@@ -341,7 +338,6 @@ export class YoutubeClient {
             queryString: core.url
                 .queryBuilder()
                 .addMany(_queryParams)
-                .add("include", _queryParams.include, { style: "comma" })
                 .mergeAdditional(requestOptions?.queryParams)
                 .build(),
             timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,
