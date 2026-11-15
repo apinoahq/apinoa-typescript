@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.18
+
+- `client.dola.answer` is described as Dola (Doubao): with `country: "CN"`, mainland China is answered by Doubao (豆包), ByteDance's service there, in the same `Answer` shape.
+
 ## 0.1.17
 
 - `client.feedback.send({ type, message, ... })` reports a failed call, wrong or missing data, or an API you need; `client.feedback.get({ id })` reads the status and our reply. Free, and `new ApinoaClient({ auth: false })` sends it without a key.
