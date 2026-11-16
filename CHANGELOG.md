@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.19
+
+Follows the API as of 2026-11-16:
+
+- New operations: `POST /v1/qwen/answer`.
+
 ## 0.1.18
 
 - `client.dola.answer` is described as Dola (Doubao): with `country: "CN"`, mainland China is answered by Doubao (豆包), ByteDance's service there, in the same `Answer` shape.

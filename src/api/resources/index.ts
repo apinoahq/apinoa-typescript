@@ -69,6 +69,8 @@ export * as naverAiTab from "./naverAiTab/index.js";
 export * from "./ocr/client/requests/index.js";
 export * as ocr from "./ocr/index.js";
 export * from "./ocr/types/index.js";
+export * from "./qwen/client/requests/index.js";
+export * as qwen from "./qwen/index.js";
 export * from "./reddit/client/requests/index.js";
 export * as reddit from "./reddit/index.js";
 export * from "./reddit/types/index.js";

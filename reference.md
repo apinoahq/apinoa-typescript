@@ -4049,6 +4049,72 @@ await client.naverAiTab.answer({
 </dl>
 </details>
 
+## Qwen
+<details><summary><code>client.qwen.<a href="/src/api/resources/qwen/client/Client.ts">answer</a>({ ...params }) -> Apinoa.AnswerResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/qwen/answer
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.qwen.answer({
+    prompt: "prompt"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AnswerQwenRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `QwenClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Reddit
 <details><summary><code>client.reddit.<a href="/src/api/resources/reddit/client/Client.ts">profile</a>({ ...params }) -> Apinoa.AccountResponse</code></summary>
 <dl>

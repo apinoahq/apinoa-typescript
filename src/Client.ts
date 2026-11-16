@@ -28,6 +28,7 @@ import { NaverClient } from "./api/resources/naver/client/Client.js";
 import { NaverAiBriefClient } from "./api/resources/naverAiBrief/client/Client.js";
 import { NaverAiTabClient } from "./api/resources/naverAiTab/client/Client.js";
 import { OcrClient } from "./api/resources/ocr/client/Client.js";
+import { QwenClient } from "./api/resources/qwen/client/Client.js";
 import { RedditClient } from "./api/resources/reddit/client/Client.js";
 import { SeznamClient } from "./api/resources/seznam/client/Client.js";
 import { ShopifyClient } from "./api/resources/shopify/client/Client.js";
@@ -78,6 +79,7 @@ export class ApinoaClient {
     protected _naver: NaverClient | undefined;
     protected _naverAiBrief: NaverAiBriefClient | undefined;
     protected _naverAiTab: NaverAiTabClient | undefined;
+    protected _qwen: QwenClient | undefined;
     protected _reddit: RedditClient | undefined;
     protected _seznam: SeznamClient | undefined;
     protected _shopify: ShopifyClient | undefined;
@@ -195,6 +197,10 @@ export class ApinoaClient {
 
     public get naverAiTab(): NaverAiTabClient {
         return (this._naverAiTab ??= new NaverAiTabClient(this._options));
+    }
+
+    public get qwen(): QwenClient {
+        return (this._qwen ??= new QwenClient(this._options));
     }
 
     public get reddit(): RedditClient {
