@@ -587,24 +587,23 @@ export class AmazonClient {
      * @throws {@link errors.ApinoaTimeoutError}
      *
      * @example
-     *     await client.amazon.product({
-     *         id: "id"
-     *     })
+     *     await client.amazon.product()
      */
     public product(
-        request: Apinoa.ProductAmazonRequest,
+        request: Apinoa.ProductAmazonRequest = {},
         requestOptions?: AmazonClient.RequestOptions,
     ): core.HttpResponsePromise<Apinoa.ProductResponse> {
         return core.HttpResponsePromise.fromPromise(this.__product(request, requestOptions));
     }
 
     private async __product(
-        request: Apinoa.ProductAmazonRequest,
+        request: Apinoa.ProductAmazonRequest = {},
         requestOptions?: AmazonClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.ProductResponse>> {
-        const { id, include, region } = request;
+        const { id, url, include, region } = request;
         const _queryParams: Record<string, unknown> = {
             id,
+            url,
             include,
             region: region != null ? region : undefined,
         };

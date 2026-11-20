@@ -154,6 +154,136 @@ export class FacebookClient {
     }
 
     /**
+     * Returns `AccountPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/facebook/profiles
+     *
+     * @param {Apinoa.ProfilesFacebookRequest} request
+     * @param {FacebookClient.RequestOptions} requestOptions - Request-specific configuration.
+     *
+     * @throws {@link Apinoa.BadRequestError}
+     * @throws {@link Apinoa.UnauthorizedError}
+     * @throws {@link Apinoa.PaymentRequiredError}
+     * @throws {@link Apinoa.ForbiddenError}
+     * @throws {@link Apinoa.NotFoundError}
+     * @throws {@link Apinoa.TooManyRequestsError}
+     * @throws {@link Apinoa.InternalServerError}
+     * @throws {@link Apinoa.NotImplementedError}
+     * @throws {@link Apinoa.BadGatewayError}
+     * @throws {@link Apinoa.ServiceUnavailableError}
+     * @throws {@link errors.ApinoaError}
+     * @throws {@link errors.ApinoaTimeoutError}
+     *
+     * @example
+     *     await client.facebook.profiles()
+     */
+    public profiles(
+        request: Apinoa.ProfilesFacebookRequest = {},
+        requestOptions?: FacebookClient.RequestOptions,
+    ): core.HttpResponsePromise<Apinoa.AccountPageResponse> {
+        return core.HttpResponsePromise.fromPromise(this.__profiles(request, requestOptions));
+    }
+
+    private async __profiles(
+        request: Apinoa.ProfilesFacebookRequest = {},
+        requestOptions?: FacebookClient.RequestOptions,
+    ): Promise<core.WithRawResponse<Apinoa.AccountPageResponse>> {
+        const { query, country, adType } = request;
+        const _queryParams: Record<string, unknown> = {
+            query,
+            country,
+            adType: adType != null ? adType : undefined,
+        };
+        const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
+        const _headers: core.Fetcher.Args["headers"] = mergeHeaders(
+            _authRequest.headers,
+            this._options?.headers,
+            requestOptions?.headers,
+        );
+        const _response = await core.fetcher({
+            url: core.url.join(
+                (await core.Supplier.get(this._options.baseUrl)) ??
+                    (await core.Supplier.get(this._options.environment)) ??
+                    environments.ApinoaEnvironment.Default,
+                "v1/facebook/profiles",
+            ),
+            method: "GET",
+            headers: _headers,
+            queryString: core.url
+                .queryBuilder()
+                .addMany(_queryParams)
+                .mergeAdditional(requestOptions?.queryParams)
+                .build(),
+            timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,
+            maxRetries: requestOptions?.maxRetries ?? this._options?.maxRetries,
+            abortSignal: requestOptions?.abortSignal,
+            fetchFn: this._options?.fetch,
+            logging: this._options.logging,
+        });
+        if (_response.ok) {
+            return { data: _response.body as Apinoa.AccountPageResponse, rawResponse: _response.rawResponse };
+        }
+
+        if (_response.error.reason === "status-code") {
+            switch (_response.error.statusCode) {
+                case 400:
+                    throw new Apinoa.BadRequestError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 401:
+                    throw new Apinoa.UnauthorizedError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 402:
+                    throw new Apinoa.PaymentRequiredError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 403:
+                    throw new Apinoa.ForbiddenError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 404:
+                    throw new Apinoa.NotFoundError(_response.error.body as Apinoa.ErrorResponse, _response.rawResponse);
+                case 429:
+                    throw new Apinoa.TooManyRequestsError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 500:
+                    throw new Apinoa.InternalServerError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 501:
+                    throw new Apinoa.NotImplementedError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 502:
+                    throw new Apinoa.BadGatewayError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                case 503:
+                    throw new Apinoa.ServiceUnavailableError(
+                        _response.error.body as Apinoa.ErrorResponse,
+                        _response.rawResponse,
+                    );
+                default:
+                    throw new errors.ApinoaError({
+                        statusCode: _response.error.statusCode,
+                        body: _response.error.body,
+                        rawResponse: _response.rawResponse,
+                    });
+            }
+        }
+
+        return handleNonStatusCodeError(_response.error, _response.rawResponse, "GET", "/v1/facebook/profiles");
+    }
+
+    /**
      * Returns `FacebookAdsPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/facebook/ads
      *
      * @param {Apinoa.AdsFacebookRequest} request

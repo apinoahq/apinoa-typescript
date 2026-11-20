@@ -455,24 +455,23 @@ export class WalmartClient {
      * @throws {@link errors.ApinoaTimeoutError}
      *
      * @example
-     *     await client.walmart.product({
-     *         id: "id"
-     *     })
+     *     await client.walmart.product()
      */
     public product(
-        request: Apinoa.ProductWalmartRequest,
+        request: Apinoa.ProductWalmartRequest = {},
         requestOptions?: WalmartClient.RequestOptions,
     ): core.HttpResponsePromise<Apinoa.ProductResponse> {
         return core.HttpResponsePromise.fromPromise(this.__product(request, requestOptions));
     }
 
     private async __product(
-        request: Apinoa.ProductWalmartRequest,
+        request: Apinoa.ProductWalmartRequest = {},
         requestOptions?: WalmartClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.ProductResponse>> {
-        const { id, seller, region } = request;
+        const { id, url, seller, region } = request;
         const _queryParams: Record<string, unknown> = {
             id,
+            url,
             seller,
             region,
         };

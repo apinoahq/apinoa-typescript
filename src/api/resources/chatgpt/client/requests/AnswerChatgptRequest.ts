@@ -15,6 +15,8 @@ export interface AnswerChatgptRequest {
     conversation?: string;
     /** Up to four photos to ask about: https URLs, or `data:image/…;base64,` URLs. */
     photos?: string[];
+    /** Let the engine search the web for the answer. */
+    webSearch?: boolean;
     /** `page`: also return the answer as a self-contained HTML page, in `page`. */
     include?: AnswerChatgptRequest.Include;
 }

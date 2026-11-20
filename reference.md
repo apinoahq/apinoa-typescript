@@ -679,9 +679,7 @@ Returns `Product` in `data`. Costs 2 units, up to 32 units. Reference: https://a
 <dd>
 
 ```typescript
-await client.amazon.product({
-    id: "id"
-});
+await client.amazon.product();
 
 ```
 </dd>
@@ -1751,6 +1749,69 @@ await client.facebook.profile();
 </dl>
 </details>
 
+<details><summary><code>client.facebook.<a href="/src/api/resources/facebook/client/Client.ts">profiles</a>({ ...params }) -> Apinoa.AccountPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AccountPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/facebook/profiles
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.facebook.profiles();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.ProfilesFacebookRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `FacebookClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 <details><summary><code>client.facebook.<a href="/src/api/resources/facebook/client/Client.ts">ads</a>({ ...params }) -> Apinoa.FacebookAdsPageResponse</code></summary>
 <dl>
 <dd>
@@ -1893,7 +1954,7 @@ await client.gemini.answer({
 <dl>
 <dd>
 
-Returns `ResultsPage` in `data`. Costs 1 unit, up to 5 units. Reference: https://apinoa.com/docs/api-reference/google/search
+Returns `ResultsPage` in `data`. Costs 1 unit, up to 10 units. Reference: https://apinoa.com/docs/api-reference/google/search
 </dd>
 </dl>
 </dd>
@@ -4104,6 +4165,72 @@ await client.qwen.answer({
 <dd>
 
 **requestOptions:** `QwenClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## Reader
+<details><summary><code>client.reader.<a href="/src/api/resources/reader/client/Client.ts">page</a>({ ...params }) -> Apinoa.ReaderPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `ReaderPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/reader/page
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.reader.page({
+    url: "url"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.PageReaderRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `ReaderClient.RequestOptions` 
     
 </dd>
 </dl>
@@ -6481,6 +6608,72 @@ await client.tripadvisor.reviews();
 </dl>
 </details>
 
+## Unlocker
+<details><summary><code>client.unlocker.<a href="/src/api/resources/unlocker/client/Client.ts">request</a>({ ...params }) -> Apinoa.UnlockResultResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `UnlockResult` in `data`. Costs 1 unit, up to 10 units. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/unlocker/request
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.unlocker.request({
+    url: "url"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.RequestUnlockerRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `UnlockerClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Walmart
 <details><summary><code>client.walmart.<a href="/src/api/resources/walmart/client/Client.ts">search</a>({ ...params }) -> Apinoa.SearchResultResponse</code></summary>
 <dl>
@@ -6702,9 +6895,7 @@ Returns `Product` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/ap
 <dd>
 
 ```typescript
-await client.walmart.product({
-    id: "id"
-});
+await client.walmart.product();
 
 ```
 </dd>
@@ -7773,7 +7964,7 @@ await client.youtube.profiles();
 <dl>
 <dd>
 
-Returns `Post` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/youtube/post
+Returns `Post` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/youtube/post
 </dd>
 </dl>
 </dd>

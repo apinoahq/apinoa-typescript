@@ -9,7 +9,7 @@ import type * as Apinoa from "../../../../index.js";
 export interface AdsFacebookRequest {
     /** Keywords to search the Ad Library for. */
     query?: string;
-    /** Every ad one advertiser runs: its numeric Page id (`profile` returns it as `id`). */
+    /** Every ad one advertiser runs: its numeric Page id (`profile` returns it as `id`; `profiles?query=` finds it by name). */
     pageId?: string;
     /** query: match the exact phrase instead of any of its words. */
     exact?: boolean;

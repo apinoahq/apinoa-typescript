@@ -23,8 +23,14 @@ export interface SearchGoogleRequest {
     timeRange?: Apinoa.SearchGoogleRequestTimeRange;
     /** Safe search. */
     safe?: Apinoa.SearchGoogleRequestSafe;
+    /** Search as if from this place: a city, region or US state ("Austin, Texas", "Austin, TX", "Texas"), or Google's canonical location name ("Austin,Texas,United States"). A name that matches more than one place is refused with the candidates. Sets `country` to the place's country when `country` is not given. */
+    near?: string;
+    /** Search as if from this place, as Google's own `uule` value (`w+…`). Instead of `near`. */
+    uule?: string;
     /** Results wanted (default 10, at most 50). More than one page is charged per page. */
     limit?: number;
+    /** Result pages to read in one call (1-10), returned as one list. Instead of `limit`; each page past the first is charged as one more unit. */
+    pages?: number;
     /** The previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

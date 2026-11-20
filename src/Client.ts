@@ -29,6 +29,7 @@ import { NaverAiBriefClient } from "./api/resources/naverAiBrief/client/Client.j
 import { NaverAiTabClient } from "./api/resources/naverAiTab/client/Client.js";
 import { OcrClient } from "./api/resources/ocr/client/Client.js";
 import { QwenClient } from "./api/resources/qwen/client/Client.js";
+import { ReaderClient } from "./api/resources/reader/client/Client.js";
 import { RedditClient } from "./api/resources/reddit/client/Client.js";
 import { SeznamClient } from "./api/resources/seznam/client/Client.js";
 import { ShopifyClient } from "./api/resources/shopify/client/Client.js";
@@ -37,6 +38,7 @@ import { ThreadsClient } from "./api/resources/threads/client/Client.js";
 import { TiktokClient } from "./api/resources/tiktok/client/Client.js";
 import { TiktokshopClient } from "./api/resources/tiktokshop/client/Client.js";
 import { TripadvisorClient } from "./api/resources/tripadvisor/client/Client.js";
+import { UnlockerClient } from "./api/resources/unlocker/client/Client.js";
 import { WalmartClient } from "./api/resources/walmart/client/Client.js";
 import { XClient } from "./api/resources/x/client/Client.js";
 import { YahooClient } from "./api/resources/yahoo/client/Client.js";
@@ -80,6 +82,7 @@ export class ApinoaClient {
     protected _naverAiBrief: NaverAiBriefClient | undefined;
     protected _naverAiTab: NaverAiTabClient | undefined;
     protected _qwen: QwenClient | undefined;
+    protected _reader: ReaderClient | undefined;
     protected _reddit: RedditClient | undefined;
     protected _seznam: SeznamClient | undefined;
     protected _shopify: ShopifyClient | undefined;
@@ -88,6 +91,7 @@ export class ApinoaClient {
     protected _tiktok: TiktokClient | undefined;
     protected _tiktokshop: TiktokshopClient | undefined;
     protected _tripadvisor: TripadvisorClient | undefined;
+    protected _unlocker: UnlockerClient | undefined;
     protected _walmart: WalmartClient | undefined;
     protected _x: XClient | undefined;
     protected _yahoo: YahooClient | undefined;
@@ -203,6 +207,10 @@ export class ApinoaClient {
         return (this._qwen ??= new QwenClient(this._options));
     }
 
+    public get reader(): ReaderClient {
+        return (this._reader ??= new ReaderClient(this._options));
+    }
+
     public get reddit(): RedditClient {
         return (this._reddit ??= new RedditClient(this._options));
     }
@@ -233,6 +241,10 @@ export class ApinoaClient {
 
     public get tripadvisor(): TripadvisorClient {
         return (this._tripadvisor ??= new TripadvisorClient(this._options));
+    }
+
+    public get unlocker(): UnlockerClient {
+        return (this._unlocker ??= new UnlockerClient(this._options));
     }
 
     public get walmart(): WalmartClient {

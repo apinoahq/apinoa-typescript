@@ -4,13 +4,13 @@ import type * as Apinoa from "../../../../index.js";
 
 /**
  * @example
- *     {
- *         id: "id"
- *     }
+ *     {}
  */
 export interface ProductAmazonRequest {
-    /** The marketplace's own product id, as carried by a search item. */
-    id: string;
+    /** The ASIN (or a book's ISBN-10), as a search item's `id` carries it. Pass this or `url`. */
+    id?: string;
+    /** An Amazon product page link instead of `id`, e.g. https://www.amazon.com/dp/B07JD5GLBN or https://www.amazon.co.jp/<name>/dp/<ASIN>. The link's site sets `region` (amazon.co.jp is JP); a `region` that disagrees with it is refused. */
+    url?: string;
     /** `offers` · `offers:5` · `offers:all` — the enumerated competing-seller offers, which are fetched separately and so opt-in. Depth counts pages of offers (10 offers each) and each page is charged; `all` walks to the end, capped at 30 pages. */
     include?: string;
     /** Which Amazon marketplace to query, by buyer country: US, CA, MX, BR, FR, IT, ES, NL, SE, TR, AE, SA, IN, JP, SG, AU. Defaults to US. Prices come back in that marketplace's own currency (JP in JPY, FR in EUR). */

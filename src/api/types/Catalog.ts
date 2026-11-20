@@ -23,6 +23,11 @@ export namespace Catalog {
             export const Kind = {
                 Marketplace: "marketplace",
                 Sns: "sns",
+                Serp: "serp",
+                Answers: "answers",
+                Company: "company",
+                Unlocker: "unlocker",
+                Reader: "reader",
             } as const;
             export type Kind = (typeof Kind)[keyof typeof Kind];
 

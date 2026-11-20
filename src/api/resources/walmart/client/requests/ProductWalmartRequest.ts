@@ -2,13 +2,13 @@
 
 /**
  * @example
- *     {
- *         id: "id"
- *     }
+ *     {}
  */
 export interface ProductWalmartRequest {
-    /** Walmart's `usItemId`, all digits, as carried by a search item — chain straight in. */
-    id: string;
+    /** Walmart's `usItemId`, all digits, as carried by a search item — chain straight in. Pass this or `url`. */
+    id?: string;
+    /** A Walmart product page link instead of `id`, e.g. https://www.walmart.com/ip/<name>/5402638498. A `selectedSellerId` in the link sets `seller`. */
+    url?: string;
     /** Walmart's numeric seller id (`seller.ext.catalogSellerId`, or `selectedSellerId` in a Walmart link; `0` is Walmart.com): the product's offer from that seller. A seller that does not sell the item gets Walmart's default offer, so compare the returned `seller.ext.catalogSellerId`. */
     seller?: string;
     /** Buyer country as ISO 3166-1 alpha-2; sets availability, shipping and price. */

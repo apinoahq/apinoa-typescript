@@ -26,7 +26,7 @@ export class GoogleClient {
     }
 
     /**
-     * Returns `ResultsPage` in `data`. Costs 1 unit, up to 5 units. Reference: https://apinoa.com/docs/api-reference/google/search
+     * Returns `ResultsPage` in `data`. Costs 1 unit, up to 10 units. Reference: https://apinoa.com/docs/api-reference/google/search
      *
      * @param {Apinoa.SearchGoogleRequest} request
      * @param {GoogleClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -58,7 +58,21 @@ export class GoogleClient {
         request: Apinoa.SearchGoogleRequest = {},
         requestOptions?: GoogleClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.ResultsPageResponse>> {
-        const { q, image, type: type_, country, lang, device, timeRange, safe, limit, cursor } = request;
+        const {
+            q,
+            image,
+            type: type_,
+            country,
+            lang,
+            device,
+            timeRange,
+            safe,
+            near,
+            uule,
+            limit,
+            pages,
+            cursor,
+        } = request;
         const _queryParams: Record<string, unknown> = {
             q,
             image,
@@ -68,7 +82,10 @@ export class GoogleClient {
             device: device != null ? device : undefined,
             timeRange: timeRange != null ? timeRange : undefined,
             safe: safe != null ? safe : undefined,
+            near,
+            uule,
             limit,
+            pages,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
