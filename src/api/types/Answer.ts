@@ -37,7 +37,7 @@ export namespace Answer {
         NaverAiTab: "naver-ai-tab",
         Qwen: "qwen",
         Yuanbao: "yuanbao",
-        Dola: "dola",
+        Doubao: "doubao",
     } as const;
     export type Engine = (typeof Engine)[keyof typeof Engine];
     export const Outcome = {
@@ -84,7 +84,7 @@ export namespace Answer {
                 NaverAiTab: "naver-ai-tab",
                 Qwen: "qwen",
                 Yuanbao: "yuanbao",
-                Dola: "dola",
+                Doubao: "doubao",
             } as const;
             export type Engine = (typeof Engine)[keyof typeof Engine];
             export const Outcome = {

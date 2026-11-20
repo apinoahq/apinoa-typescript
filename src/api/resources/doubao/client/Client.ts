@@ -10,7 +10,7 @@ import { handleNonStatusCodeError } from "../../../../errors/handleNonStatusCode
 import * as errors from "../../../../errors/index.js";
 import * as Apinoa from "../../../index.js";
 
-export declare namespace DolaClient {
+export declare namespace DoubaoClient {
     export type Options = BaseClientOptions;
 
     export interface RequestOptions extends BaseRequestOptions {}
@@ -19,18 +19,18 @@ export declare namespace DolaClient {
 /**
  * What Doubao answers to a prompt, in the shared answer schema (Answer).
  */
-export class DolaClient {
-    protected readonly _options: NormalizedClientOptionsWithAuth<DolaClient.Options>;
+export class DoubaoClient {
+    protected readonly _options: NormalizedClientOptionsWithAuth<DoubaoClient.Options>;
 
-    constructor(options: DolaClient.Options = {}) {
+    constructor(options: DoubaoClient.Options = {}) {
         this._options = normalizeClientOptionsWithAuth(options);
     }
 
     /**
-     * Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/dola/answer
+     * Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/doubao/answer
      *
-     * @param {Apinoa.AnswerDolaRequest} request
-     * @param {DolaClient.RequestOptions} requestOptions - Request-specific configuration.
+     * @param {Apinoa.AnswerDoubaoRequest} request
+     * @param {DoubaoClient.RequestOptions} requestOptions - Request-specific configuration.
      *
      * @throws {@link Apinoa.BadRequestError}
      * @throws {@link Apinoa.UnauthorizedError}
@@ -46,20 +46,20 @@ export class DolaClient {
      * @throws {@link errors.ApinoaTimeoutError}
      *
      * @example
-     *     await client.dola.answer({
+     *     await client.doubao.answer({
      *         prompt: "prompt"
      *     })
      */
     public answer(
-        request: Apinoa.AnswerDolaRequest,
-        requestOptions?: DolaClient.RequestOptions,
+        request: Apinoa.AnswerDoubaoRequest,
+        requestOptions?: DoubaoClient.RequestOptions,
     ): core.HttpResponsePromise<Apinoa.AnswerResponse> {
         return core.HttpResponsePromise.fromPromise(this.__answer(request, requestOptions));
     }
 
     private async __answer(
-        request: Apinoa.AnswerDolaRequest,
-        requestOptions?: DolaClient.RequestOptions,
+        request: Apinoa.AnswerDoubaoRequest,
+        requestOptions?: DoubaoClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.AnswerResponse>> {
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(
@@ -72,7 +72,7 @@ export class DolaClient {
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
                     environments.ApinoaEnvironment.Default,
-                "v1/dola/answer",
+                "v1/doubao/answer",
             ),
             method: "POST",
             headers: _headers,
@@ -148,6 +148,6 @@ export class DolaClient {
             }
         }
 
-        return handleNonStatusCodeError(_response.error, _response.rawResponse, "POST", "/v1/dola/answer");
+        return handleNonStatusCodeError(_response.error, _response.rawResponse, "POST", "/v1/doubao/answer");
     }
 }

@@ -9,7 +9,7 @@ import { ChatgptClient } from "./api/resources/chatgpt/client/Client.js";
 import { CompanyClient } from "./api/resources/company/client/Client.js";
 import { CopilotClient } from "./api/resources/copilot/client/Client.js";
 import { DaumClient } from "./api/resources/daum/client/Client.js";
-import { DolaClient } from "./api/resources/dola/client/Client.js";
+import { DoubaoClient } from "./api/resources/doubao/client/Client.js";
 import { DuckduckgoClient } from "./api/resources/duckduckgo/client/Client.js";
 import { FacebookClient } from "./api/resources/facebook/client/Client.js";
 import { FeedbackClient } from "./api/resources/feedback/client/Client.js";
@@ -66,7 +66,7 @@ export class ApinoaClient {
     protected _company: CompanyClient | undefined;
     protected _copilot: CopilotClient | undefined;
     protected _daum: DaumClient | undefined;
-    protected _dola: DolaClient | undefined;
+    protected _doubao: DoubaoClient | undefined;
     protected _duckduckgo: DuckduckgoClient | undefined;
     protected _facebook: FacebookClient | undefined;
     protected _gemini: GeminiClient | undefined;
@@ -143,8 +143,8 @@ export class ApinoaClient {
         return (this._daum ??= new DaumClient(this._options));
     }
 
-    public get dola(): DolaClient {
-        return (this._dola ??= new DolaClient(this._options));
+    public get doubao(): DoubaoClient {
+        return (this._doubao ??= new DoubaoClient(this._options));
     }
 
     public get duckduckgo(): DuckduckgoClient {

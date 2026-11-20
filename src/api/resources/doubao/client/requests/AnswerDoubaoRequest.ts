@@ -6,7 +6,7 @@
  *         prompt: "prompt"
  *     }
  */
-export interface AnswerDolaRequest {
+export interface AnswerDoubaoRequest {
     /** The question, as a person would type it. */
     prompt: string;
     /** The market the answer is asked from, as an ISO 3166 country code. Each engine's page lists its countries. */
@@ -14,10 +14,10 @@ export interface AnswerDolaRequest {
     /** An earlier answer's `conversation.id`: ask a follow-up in the same conversation. */
     conversation?: string;
     /** `page`: also return the answer as a self-contained HTML page, in `page`. */
-    include?: AnswerDolaRequest.Include;
+    include?: AnswerDoubaoRequest.Include;
 }
 
-export namespace AnswerDolaRequest {
+export namespace AnswerDoubaoRequest {
     /**
      * `page`: also return the answer as a self-contained HTML page, in `page`.
      */

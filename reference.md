@@ -1490,8 +1490,8 @@ await client.daum.suggestions({
 </dl>
 </details>
 
-## Dola
-<details><summary><code>client.dola.<a href="/src/api/resources/dola/client/Client.ts">answer</a>({ ...params }) -> Apinoa.AnswerResponse</code></summary>
+## Doubao
+<details><summary><code>client.doubao.<a href="/src/api/resources/doubao/client/Client.ts">answer</a>({ ...params }) -> Apinoa.AnswerResponse</code></summary>
 <dl>
 <dd>
 
@@ -1503,7 +1503,7 @@ await client.daum.suggestions({
 <dl>
 <dd>
 
-Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/dola/answer
+Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/doubao/answer
 </dd>
 </dl>
 </dd>
@@ -1518,7 +1518,7 @@ Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference
 <dd>
 
 ```typescript
-await client.dola.answer({
+await client.doubao.answer({
     prompt: "prompt"
 });
 
@@ -1536,7 +1536,7 @@ await client.dola.answer({
 <dl>
 <dd>
 
-**request:** `Apinoa.AnswerDolaRequest` 
+**request:** `Apinoa.AnswerDoubaoRequest` 
     
 </dd>
 </dl>
@@ -1544,7 +1544,7 @@ await client.dola.answer({
 <dl>
 <dd>
 
-**requestOptions:** `DolaClient.RequestOptions` 
+**requestOptions:** `DoubaoClient.RequestOptions` 
     
 </dd>
 </dl>
