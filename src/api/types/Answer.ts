@@ -38,6 +38,7 @@ export namespace Answer {
         Qwen: "qwen",
         Yuanbao: "yuanbao",
         Doubao: "doubao",
+        BaiduAiSearch: "baidu-ai-search",
     } as const;
     export type Engine = (typeof Engine)[keyof typeof Engine];
     export const Outcome = {
@@ -85,6 +86,7 @@ export namespace Answer {
                 Qwen: "qwen",
                 Yuanbao: "yuanbao",
                 Doubao: "doubao",
+                BaiduAiSearch: "baidu-ai-search",
             } as const;
             export type Engine = (typeof Engine)[keyof typeof Engine];
             export const Outcome = {
