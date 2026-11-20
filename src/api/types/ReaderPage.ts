@@ -5,6 +5,8 @@ export interface ReaderPage {
     url: string;
     /** The address that answered, after redirects. */
     finalUrl: string;
+    /** Present when the page is a shell whose content sits in a frame on the same site (Naver Blog): the frame's address, which the content was read from. */
+    frameUrl?: string | undefined;
     /** The site's HTTP status. A 404 page is still a page. */
     status: number;
     /** The site's Content-Type. */

@@ -13,12 +13,16 @@ export interface PlacesGoogleRequest {
     location?: string;
     /** Search around this place name, or a `lat,lng` point. */
     near?: string;
+    /** Search as if from this place, as Google's own `uule` value (`w+…`). Instead of `near`. */
+    uule?: string;
     /** The market, as an ISO 3166 country code. */
     country?: Apinoa.PlacesGoogleRequestCountry;
     /** Interface language. */
     lang?: string;
     /** Results wanted (default 20, at most 60). More than one page is charged per page. */
     limit?: number;
+    /** Pages of 20 places to read in one call (1-3), returned as one list. Instead of `limit`; each page past the first is charged as one more unit. */
+    pages?: number;
     /** The previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

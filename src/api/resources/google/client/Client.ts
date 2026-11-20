@@ -344,14 +344,16 @@ export class GoogleClient {
         request: Apinoa.PlacesGoogleRequest = {},
         requestOptions?: GoogleClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PlacesPageResponse>> {
-        const { q, location, near, country, lang, limit, cursor } = request;
+        const { q, location, near, uule, country, lang, limit, pages, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             q,
             location,
             near,
+            uule,
             country: country != null ? country : undefined,
             lang,
             limit,
+            pages,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
