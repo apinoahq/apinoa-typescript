@@ -13,6 +13,8 @@ export interface AnswerGeminiRequest {
     country?: string;
     /** An earlier answer's `conversation.id`: ask a follow-up in the same conversation. */
     conversation?: string;
+    /** Up to 4 further questions, asked in order in the same conversation after `prompt`. Each answer is returned in `followUps` and billed like the first. */
+    followUps?: string[];
     /** `page`: also return the answer as a self-contained HTML page, in `page`. */
     include?: AnswerGeminiRequest.Include;
 }

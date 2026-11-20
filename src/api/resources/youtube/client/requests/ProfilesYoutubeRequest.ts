@@ -7,6 +7,10 @@
 export interface ProfilesYoutubeRequest {
     /** Search channels by keyword. */
     query?: string;
+    /** The country YouTube ranks the search for (ISO alpha-2, default US; it biases the ranking, it does not restrict it). */
+    country?: string;
+    /** Search the query exactly as typed: no "Showing results for" spelling correction (when YouTube does correct, page 1's ext.correctedQuery names what it searched). */
+    exactSpelling?: boolean;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

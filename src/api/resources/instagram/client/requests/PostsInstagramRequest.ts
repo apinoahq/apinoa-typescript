@@ -15,6 +15,8 @@ export interface PostsInstagramRequest {
     hashtag?: string;
     /** Posts at a location: numeric location id or URL (…/explore/locations/<id>/). One page: Instagram shows the rest only to signed-in users. */
     location?: string;
+    /** Search posts by keyword — a word, a phrase, a hashtag word or a brand name (mostly reels, Instagram's top results). `ext` carries Instagram's description of the keyword and its related searches. Some keywords Instagram shows only to signed-in users. */
+    query?: string;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

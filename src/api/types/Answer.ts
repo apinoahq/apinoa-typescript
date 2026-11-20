@@ -22,6 +22,7 @@ export interface Answer {
     results?: Apinoa.Result[] | undefined;
     page?: string | undefined;
     ext?: Record<string, unknown> | undefined;
+    followUps?: Answer.FollowUps.Item[] | undefined;
 }
 
 export namespace Answer {
@@ -46,4 +47,53 @@ export namespace Answer {
         Partial: "partial",
     } as const;
     export type Outcome = (typeof Outcome)[keyof typeof Outcome];
+    export type FollowUps = FollowUps.Item[];
+
+    export namespace FollowUps {
+        export interface Item {
+            engine: Item.Engine;
+            outcome: Item.Outcome;
+            prompt: string;
+            askedAt: string;
+            country: string;
+            language?: string | undefined;
+            conversation?: Apinoa.Conversation | undefined;
+            title?: string | undefined;
+            blocks: Apinoa.Block[];
+            text: string;
+            markdown: string;
+            citations: Apinoa.Citation[];
+            sources: Apinoa.Source[];
+            mentions: Apinoa.AnswerMention[];
+            cards: Apinoa.Card[];
+            suggestions: Apinoa.Suggestion[];
+            results?: Apinoa.Result[] | undefined;
+            page?: string | undefined;
+            ext?: Record<string, unknown> | undefined;
+        }
+
+        export namespace Item {
+            export const Engine = {
+                GoogleAio: "google-aio",
+                GoogleAiMode: "google-ai-mode",
+                Chatgpt: "chatgpt",
+                Gemini: "gemini",
+                Perplexity: "perplexity",
+                Copilot: "copilot",
+                NaverAiBrief: "naver-ai-brief",
+                NaverAiTab: "naver-ai-tab",
+                Qwen: "qwen",
+                Yuanbao: "yuanbao",
+                Dola: "dola",
+            } as const;
+            export type Engine = (typeof Engine)[keyof typeof Engine];
+            export const Outcome = {
+                Answered: "answered",
+                NoAnswer: "noAnswer",
+                Refused: "refused",
+                Partial: "partial",
+            } as const;
+            export type Outcome = (typeof Outcome)[keyof typeof Outcome];
+        }
+    }
 }

@@ -17,6 +17,8 @@ export interface AnswerChatgptRequest {
     photos?: string[];
     /** Let the engine search the web for the answer. */
     webSearch?: boolean;
+    /** Up to 4 further questions, asked in order in the same conversation after `prompt`. Each answer is returned in `followUps` and billed like the first. */
+    followUps?: string[];
     /** `page`: also return the answer as a self-contained HTML page, in `page`. */
     include?: AnswerChatgptRequest.Include;
 }

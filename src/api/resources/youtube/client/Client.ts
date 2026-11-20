@@ -187,9 +187,11 @@ export class YoutubeClient {
         request: Apinoa.ProfilesYoutubeRequest = {},
         requestOptions?: YoutubeClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.AccountPageResponse>> {
-        const { query, cursor } = request;
+        const { query, country, exactSpelling, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             query,
+            country,
+            exactSpelling,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
@@ -449,7 +451,21 @@ export class YoutubeClient {
         request: Apinoa.PostsYoutubeRequest = {},
         requestOptions?: YoutubeClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PostPageResponse>> {
-        const { username, userId, query, hashtag, relatedTo, type: type_, country, cursor } = request;
+        const {
+            username,
+            userId,
+            query,
+            hashtag,
+            relatedTo,
+            type: type_,
+            sort,
+            period,
+            duration,
+            features,
+            exactSpelling,
+            country,
+            cursor,
+        } = request;
         const _queryParams: Record<string, unknown> = {
             username,
             userId,
@@ -457,6 +473,11 @@ export class YoutubeClient {
             hashtag,
             relatedTo,
             type: type_ != null ? type_ : undefined,
+            sort: sort != null ? sort : undefined,
+            period: period != null ? period : undefined,
+            duration: duration != null ? duration : undefined,
+            features,
+            exactSpelling,
             country,
             cursor,
         };
@@ -478,6 +499,7 @@ export class YoutubeClient {
             queryString: core.url
                 .queryBuilder()
                 .addMany(_queryParams)
+                .add("features", _queryParams.features, { style: "comma" })
                 .mergeAdditional(requestOptions?.queryParams)
                 .build(),
             timeoutMs: (requestOptions?.timeoutInSeconds ?? this._options?.timeoutInSeconds ?? 300) * 1000,
@@ -715,11 +737,14 @@ export class YoutubeClient {
         request: Apinoa.GroupsYoutubeRequest = {},
         requestOptions?: YoutubeClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.GroupPageResponse>> {
-        const { username, userId, type: type_, cursor } = request;
+        const { username, userId, query, type: type_, country, exactSpelling, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             username,
             userId,
+            query,
             type: type_ != null ? type_ : undefined,
+            country,
+            exactSpelling,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();

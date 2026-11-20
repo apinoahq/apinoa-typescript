@@ -1176,7 +1176,7 @@ await client.bing.suggestions({
 <dl>
 <dd>
 
-Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/chatgpt/answer
+Returns `Answer` in `data`. Costs 1 unit, up to 5 units. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/chatgpt/answer
 </dd>
 </dl>
 </dd>
@@ -1888,7 +1888,7 @@ await client.facebook.ads();
 <dl>
 <dd>
 
-Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/gemini/answer
+Returns `Answer` in `data`. Costs 1 unit, up to 5 units. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/gemini/answer
 </dd>
 </dl>
 </dd>

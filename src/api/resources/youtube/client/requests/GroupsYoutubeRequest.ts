@@ -11,8 +11,14 @@ export interface GroupsYoutubeRequest {
     username?: string;
     /** Channel id (UC…). */
     userId?: string;
-    /** playlists (a channel's playlists). */
+    /** Search playlists by keyword (playlists, Mixes and podcasts). */
+    query?: string;
+    /** playlists (a channel's playlists, or the playlists a search finds). */
     type?: Apinoa.GroupsYoutubeRequestType;
+    /** query only: the country YouTube ranks the search for (ISO alpha-2, default US; it biases, it does not restrict). */
+    country?: string;
+    /** query only: search the query exactly as typed (no "Showing results for" correction). */
+    exactSpelling?: boolean;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

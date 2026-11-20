@@ -27,7 +27,7 @@ export class GeminiClient {
     }
 
     /**
-     * Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/gemini/answer
+     * Returns `Answer` in `data`. Costs 1 unit, up to 5 units. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/gemini/answer
      *
      * @param {Apinoa.AnswerGeminiRequest} request
      * @param {GeminiClient.RequestOptions} requestOptions - Request-specific configuration.

@@ -3,6 +3,7 @@
 export const PostsYoutubeRequestType = {
     Videos: "videos",
     Shorts: "shorts",
+    Movies: "movies",
     Live: "live",
     Community: "community",
 } as const;

@@ -27,7 +27,7 @@ export class ChatgptClient {
     }
 
     /**
-     * Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/chatgpt/answer
+     * Returns `Answer` in `data`. Costs 1 unit, up to 5 units. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/chatgpt/answer
      *
      * @param {Apinoa.AnswerChatgptRequest} request
      * @param {ChatgptClient.RequestOptions} requestOptions - Request-specific configuration.

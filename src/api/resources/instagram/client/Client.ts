@@ -318,12 +318,13 @@ export class InstagramClient {
         request: Apinoa.PostsInstagramRequest = {},
         requestOptions?: InstagramClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PostPageResponse>> {
-        const { username, type: type_, hashtag, location, cursor } = request;
+        const { username, type: type_, hashtag, location, query, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             username,
             type: type_ != null ? type_ : undefined,
             hashtag,
             location,
+            query,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
