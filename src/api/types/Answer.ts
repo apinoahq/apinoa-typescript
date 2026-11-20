@@ -40,6 +40,7 @@ export namespace Answer {
         Doubao: "doubao",
         MetaAi: "meta-ai",
         BaiduAiSearch: "baidu-ai-search",
+        BraveAiAnswers: "brave-ai-answers",
     } as const;
     export type Engine = (typeof Engine)[keyof typeof Engine];
     export const Outcome = {
@@ -89,6 +90,7 @@ export namespace Answer {
                 Doubao: "doubao",
                 MetaAi: "meta-ai",
                 BaiduAiSearch: "baidu-ai-search",
+                BraveAiAnswers: "brave-ai-answers",
             } as const;
             export type Engine = (typeof Engine)[keyof typeof Engine];
             export const Outcome = {

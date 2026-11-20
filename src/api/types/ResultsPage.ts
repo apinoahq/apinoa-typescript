@@ -36,6 +36,7 @@ export namespace ResultsPage {
         Daum: "daum",
         Sogou: "sogou",
         Tripadvisor: "tripadvisor",
+        Brave: "brave",
     } as const;
     export type Engine = (typeof Engine)[keyof typeof Engine];
     export const Type = {

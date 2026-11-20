@@ -23,6 +23,7 @@ export namespace Suggestions {
         Daum: "daum",
         Sogou: "sogou",
         Tripadvisor: "tripadvisor",
+        Brave: "brave",
     } as const;
     export type Engine = (typeof Engine)[keyof typeof Engine];
     export type Suggestions = Suggestions.Item[];
