@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.23
+
+Follows the API as of 2026-11-20:
+
+- `client.dola` is documented as Doubao (豆包), ByteDance's name for the engine. Nothing in the calls changed.
+
 ## 0.1.22
 
 Follows the API as of 2026-11-20:

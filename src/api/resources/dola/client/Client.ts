@@ -17,7 +17,7 @@ export declare namespace DolaClient {
 }
 
 /**
- * What Dola (Doubao) answers to a prompt, in the shared answer schema (Answer).
+ * What Doubao answers to a prompt, in the shared answer schema (Answer).
  */
 export class DolaClient {
     protected readonly _options: NormalizedClientOptionsWithAuth<DolaClient.Options>;
