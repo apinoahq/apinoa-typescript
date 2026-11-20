@@ -24,6 +24,7 @@ import { ImageTranslateClient } from "./api/resources/imageTranslate/client/Clie
 import { InstagramClient } from "./api/resources/instagram/client/Client.js";
 import { LinkedinClient } from "./api/resources/linkedin/client/Client.js";
 import { MarketplacesClient } from "./api/resources/marketplaces/client/Client.js";
+import { MetaAiClient } from "./api/resources/metaAi/client/Client.js";
 import { NaverClient } from "./api/resources/naver/client/Client.js";
 import { NaverAiBriefClient } from "./api/resources/naverAiBrief/client/Client.js";
 import { NaverAiTabClient } from "./api/resources/naverAiTab/client/Client.js";
@@ -78,6 +79,7 @@ export class ApinoaClient {
     protected _googleTrends: GoogleTrendsClient | undefined;
     protected _instagram: InstagramClient | undefined;
     protected _linkedin: LinkedinClient | undefined;
+    protected _metaAi: MetaAiClient | undefined;
     protected _naver: NaverClient | undefined;
     protected _naverAiBrief: NaverAiBriefClient | undefined;
     protected _naverAiTab: NaverAiTabClient | undefined;
@@ -189,6 +191,10 @@ export class ApinoaClient {
 
     public get linkedin(): LinkedinClient {
         return (this._linkedin ??= new LinkedinClient(this._options));
+    }
+
+    public get metaAi(): MetaAiClient {
+        return (this._metaAi ??= new MetaAiClient(this._options));
     }
 
     public get naver(): NaverClient {

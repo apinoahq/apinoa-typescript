@@ -59,6 +59,8 @@ export * from "./instagram/types/index.js";
 export * from "./linkedin/client/requests/index.js";
 export * as linkedin from "./linkedin/index.js";
 export * as marketplaces from "./marketplaces/index.js";
+export * from "./metaAi/client/requests/index.js";
+export * as metaAi from "./metaAi/index.js";
 export * from "./naver/client/requests/index.js";
 export * as naver from "./naver/index.js";
 export * from "./naver/types/index.js";

@@ -3660,6 +3660,72 @@ await client.linkedin.jobs();
 </dl>
 </details>
 
+## Meta AI
+<details><summary><code>client.metaAi.<a href="/src/api/resources/metaAi/client/Client.ts">answer</a>({ ...params }) -> Apinoa.AnswerResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/meta-ai/answer
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.metaAi.answer({
+    prompt: "prompt"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AnswerMetaAiRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `MetaAiClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Naver
 <details><summary><code>client.naver.<a href="/src/api/resources/naver/client/Client.ts">search</a>({ ...params }) -> Apinoa.ResultsPageResponse</code></summary>
 <dl>
