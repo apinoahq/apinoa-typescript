@@ -6,7 +6,6 @@ import { AppStoreClient } from "./api/resources/appStore/client/Client.js";
 import { BaiduClient } from "./api/resources/baidu/client/Client.js";
 import { BaiduWenxinClient } from "./api/resources/baiduWenxin/client/Client.js";
 import { BingClient } from "./api/resources/bing/client/Client.js";
-import { BraveClient } from "./api/resources/brave/client/Client.js";
 import { ChatgptClient } from "./api/resources/chatgpt/client/Client.js";
 import { CompanyClient } from "./api/resources/company/client/Client.js";
 import { CopilotClient } from "./api/resources/copilot/client/Client.js";
@@ -66,7 +65,6 @@ export class ApinoaClient {
     protected _baidu: BaiduClient | undefined;
     protected _baiduWenxin: BaiduWenxinClient | undefined;
     protected _bing: BingClient | undefined;
-    protected _brave: BraveClient | undefined;
     protected _chatgpt: ChatgptClient | undefined;
     protected _company: CompanyClient | undefined;
     protected _copilot: CopilotClient | undefined;
@@ -135,10 +133,6 @@ export class ApinoaClient {
 
     public get bing(): BingClient {
         return (this._bing ??= new BingClient(this._options));
-    }
-
-    public get brave(): BraveClient {
-        return (this._brave ??= new BraveClient(this._options));
     }
 
     public get chatgpt(): ChatgptClient {
