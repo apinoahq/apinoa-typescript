@@ -8,5 +8,6 @@ export const CommentsRedditRequestSort = {
     Old: "old",
     Qa: "qa",
     Hot: "hot",
+    Relevance: "relevance",
 } as const;
 export type CommentsRedditRequestSort = (typeof CommentsRedditRequestSort)[keyof typeof CommentsRedditRequestSort];

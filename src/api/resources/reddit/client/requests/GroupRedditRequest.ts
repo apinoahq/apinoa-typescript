@@ -7,6 +7,6 @@
 export interface GroupRedditRequest {
     /** Community name (with or without r/) or URL. */
     community?: string;
-    /** Extra reads to attach under `ext`: rules (+1 unit). The community's style is always in `ext.style` (it comes with the community), so `style` is accepted and free. */
+    /** Extra reads to attach under `ext`, +1 unit each: rules; widgets (the sidebar: ID card, text, buttons, menus, images, recommended communities, events, post flairs); wiki (the wiki's front page, or `available: false` with Reddit's reason). The community's style is always in `ext.style` (it comes with the community), so `style` is accepted and free. */
     include?: string | string[];
 }

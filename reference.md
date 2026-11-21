@@ -4702,7 +4702,7 @@ await client.reddit.comments();
 <dl>
 <dd>
 
-Returns `Group` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/reddit/group
+Returns `Group` in `data`. Costs 1 unit, up to 4 units. Reference: https://apinoa.com/docs/api-reference/reddit/group
 </dd>
 </dl>
 </dd>

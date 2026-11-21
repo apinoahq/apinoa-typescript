@@ -13,7 +13,11 @@ export interface CommentsRedditRequest {
     comment?: string;
     /** A user's comments: username or profile URL. */
     username?: string;
-    /** Order. post: confidence (Reddit's 'best'), top, new, controversial, old, qa · username: new, hot, top, controversial. */
+    /** A community's newest comments across its posts: name (with or without r/) or URL; several joined by + (SaaS+startups); all for the whole site. With `query`, narrows the search to one community. */
+    community?: string;
+    /** Search comments by keyword. */
+    query?: string;
+    /** Order. post: confidence (Reddit's 'best'), top, new, controversial, old, qa · username: new, hot, top, controversial · query: relevance, top, new · community: newest first, no sort. */
     sort?: Apinoa.CommentsRedditRequestSort;
     /** Time window for sort top or controversial: hour, day, week, month, year or all. */
     period?: Apinoa.CommentsRedditRequestPeriod;

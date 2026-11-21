@@ -8,5 +8,6 @@ export const PostsRedditRequestSort = {
     Controversial: "controversial",
     Relevance: "relevance",
     Comments: "comments",
+    Best: "best",
 } as const;
 export type PostsRedditRequestSort = (typeof PostsRedditRequestSort)[keyof typeof PostsRedditRequestSort];

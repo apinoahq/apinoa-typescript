@@ -188,9 +188,10 @@ export class RedditClient {
         request: Apinoa.ProfilesRedditRequest = {},
         requestOptions?: RedditClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.AccountPageResponse>> {
-        const { query, limit, cursor } = request;
+        const { query, type: type_, limit, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             query,
+            type: type_ != null ? type_ : undefined,
             limit,
             cursor,
         };
@@ -446,12 +447,28 @@ export class RedditClient {
         request: Apinoa.PostsRedditRequest = {},
         requestOptions?: RedditClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PostPageResponse>> {
-        const { username, community, query, ids, sort, period, country, limit, cursor } = request;
+        const {
+            username,
+            community,
+            query,
+            ids,
+            domain,
+            relatedTo,
+            type: type_,
+            sort,
+            period,
+            country,
+            limit,
+            cursor,
+        } = request;
         const _queryParams: Record<string, unknown> = {
             username,
             community,
             query,
             ids,
+            domain,
+            relatedTo,
+            type: type_ != null ? type_ : undefined,
             sort: sort != null ? sort : undefined,
             period: period != null ? period : undefined,
             country,
@@ -583,11 +600,13 @@ export class RedditClient {
         request: Apinoa.CommentsRedditRequest = {},
         requestOptions?: RedditClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.CommentPageResponse>> {
-        const { post, comment, username, sort, period, limit, cursor } = request;
+        const { post, comment, username, community, query, sort, period, limit, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             post,
             comment,
             username,
+            community,
+            query,
             sort: sort != null ? sort : undefined,
             period: period != null ? period : undefined,
             limit,
@@ -685,7 +704,7 @@ export class RedditClient {
     }
 
     /**
-     * Returns `Group` in `data`. Costs 1 unit, up to 2 units. Reference: https://apinoa.com/docs/api-reference/reddit/group
+     * Returns `Group` in `data`. Costs 1 unit, up to 4 units. Reference: https://apinoa.com/docs/api-reference/reddit/group
      *
      * @param {Apinoa.GroupRedditRequest} request
      * @param {RedditClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -847,11 +866,12 @@ export class RedditClient {
         request: Apinoa.GroupsRedditRequest = {},
         requestOptions?: RedditClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.GroupPageResponse>> {
-        const { query, prefix, username, includeNsfw, limit, cursor } = request;
+        const { query, prefix, username, type: type_, includeNsfw, limit, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             query,
             prefix,
             username,
+            type: type_ != null ? type_ : undefined,
             includeNsfw,
             limit,
             cursor,

@@ -9,17 +9,23 @@ import type * as Apinoa from "../../../../index.js";
 export interface PostsRedditRequest {
     /** A user's posts: username (with or without u/) or profile URL. */
     username?: string;
-    /** A community's posts: name (with or without r/) or URL. With `query`, narrows the search to it. */
+    /** A community's posts: name (with or without r/) or URL; several joined by + (SaaS+startups) for one merged feed; all or popular for the whole site. With `query`, narrows the search to one community. */
     community?: string;
     /** Search posts by keyword. */
     query?: string;
     /** Specific posts: ids, fullnames (t3_…) or URLs, 1–100 in one call. */
     ids?: string | string[];
-    /** Order. username: new, hot, top, controversial · community: hot, new, top, rising, controversial · query: relevance, hot, top, new, comments · default feed: hot, new, top, rising. */
+    /** Posts linking to one site, across every community: its domain (github.com, i.redd.it) or a URL on it. */
+    domain?: string;
+    /** A post id or URL: the posts Reddit shows beside it as related, or with type crossposts its crossposts. */
+    relatedTo?: string;
+    /** query: media (only posts with images or video) · relatedTo: crossposts (the post's copies in other communities). */
+    type?: Apinoa.PostsRedditRequestType;
+    /** Order. username: new, hot, top, controversial · community: hot, new, top, rising, controversial (several joined by +: not new) · query: relevance, hot, top, new, comments · domain: hot, new, top, rising, controversial · default feed: hot, new, top, rising, best (Reddit's front page). */
     sort?: Apinoa.PostsRedditRequestSort;
     /** Time window for sort top or controversial: hour, day, week, month, year or all. */
     period?: Apinoa.PostsRedditRequestPeriod;
-    /** Default feed only: the country whose popular feed to read (ISO alpha-2). */
+    /** Default feed only: the country whose popular feed to read (ISO alpha-2). Not with sort new or best. */
     country?: string;
     /** Items per page, 1–100. */
     limit?: number;
