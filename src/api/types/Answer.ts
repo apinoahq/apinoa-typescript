@@ -39,6 +39,7 @@ export namespace Answer {
         Yuanbao: "yuanbao",
         Doubao: "doubao",
         MetaAi: "meta-ai",
+        BaiduWenxin: "baidu-wenxin",
         BaiduAiSearch: "baidu-ai-search",
         BraveAiAnswers: "brave-ai-answers",
     } as const;
@@ -89,6 +90,7 @@ export namespace Answer {
                 Yuanbao: "yuanbao",
                 Doubao: "doubao",
                 MetaAi: "meta-ai",
+                BaiduWenxin: "baidu-wenxin",
                 BaiduAiSearch: "baidu-ai-search",
                 BraveAiAnswers: "brave-ai-answers",
             } as const;

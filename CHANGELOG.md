@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.29
+
+Follows the API as of 2026-11-21:
+
+- New operations: `POST /v1/baidu-wenxin/answer`.
+
 ## 0.1.28
 
 Follows the API as of 2026-11-20:

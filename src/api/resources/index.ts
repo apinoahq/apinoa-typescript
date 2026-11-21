@@ -10,6 +10,8 @@ export * from "./appStore/types/index.js";
 export * from "./baidu/client/requests/index.js";
 export * as baidu from "./baidu/index.js";
 export * from "./baidu/types/index.js";
+export * from "./baiduWenxin/client/requests/index.js";
+export * as baiduWenxin from "./baiduWenxin/index.js";
 export * from "./bing/client/requests/index.js";
 export * as bing from "./bing/index.js";
 export * from "./bing/types/index.js";

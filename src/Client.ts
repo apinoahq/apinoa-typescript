@@ -4,6 +4,7 @@ import { AliexpressClient } from "./api/resources/aliexpress/client/Client.js";
 import { AmazonClient } from "./api/resources/amazon/client/Client.js";
 import { AppStoreClient } from "./api/resources/appStore/client/Client.js";
 import { BaiduClient } from "./api/resources/baidu/client/Client.js";
+import { BaiduWenxinClient } from "./api/resources/baiduWenxin/client/Client.js";
 import { BingClient } from "./api/resources/bing/client/Client.js";
 import { BraveClient } from "./api/resources/brave/client/Client.js";
 import { ChatgptClient } from "./api/resources/chatgpt/client/Client.js";
@@ -63,6 +64,7 @@ export class ApinoaClient {
     protected _amazon: AmazonClient | undefined;
     protected _appStore: AppStoreClient | undefined;
     protected _baidu: BaiduClient | undefined;
+    protected _baiduWenxin: BaiduWenxinClient | undefined;
     protected _bing: BingClient | undefined;
     protected _brave: BraveClient | undefined;
     protected _chatgpt: ChatgptClient | undefined;
@@ -125,6 +127,10 @@ export class ApinoaClient {
 
     public get baidu(): BaiduClient {
         return (this._baidu ??= new BaiduClient(this._options));
+    }
+
+    public get baiduWenxin(): BaiduWenxinClient {
+        return (this._baiduWenxin ??= new BaiduWenxinClient(this._options));
     }
 
     public get bing(): BingClient {

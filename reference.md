@@ -1034,6 +1034,72 @@ await client.baidu.suggestions({
 </dl>
 </details>
 
+## Baidu Wenxin
+<details><summary><code>client.baiduWenxin.<a href="/src/api/resources/baiduWenxin/client/Client.ts">answer</a>({ ...params }) -> Apinoa.AnswerResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Answer` in `data`. Costs 1 unit. POST only, with a JSON body. Reference: https://apinoa.com/docs/api-reference/baidu-wenxin/answer
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.baiduWenxin.answer({
+    prompt: "prompt"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AnswerBaiduWenxinRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `BaiduWenxinClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Bing
 <details><summary><code>client.bing.<a href="/src/api/resources/bing/client/Client.ts">search</a>({ ...params }) -> Apinoa.ResultsPageResponse</code></summary>
 <dl>
