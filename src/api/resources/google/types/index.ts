@@ -1,4 +1,5 @@
 export * from "./PlacesGoogleRequestCountry.js";
+export * from "./ReviewsGoogleRequestSort.js";
 export * from "./SearchGoogleRequestCountry.js";
 export * from "./SearchGoogleRequestDevice.js";
 export * from "./SearchGoogleRequestSafe.js";

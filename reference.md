@@ -2134,6 +2134,69 @@ await client.google.place();
 </dl>
 </details>
 
+<details><summary><code>client.google.<a href="/src/api/resources/google/client/Client.ts">reviews</a>({ ...params }) -> Apinoa.PlaceReviewsPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `PlaceReviewsPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/google/reviews
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.google.reviews();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.ReviewsGoogleRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `GoogleClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## GoogleAds
 <details><summary><code>client.googleAds.<a href="/src/api/resources/googleAds/client/Client.ts">advertisers</a>({ ...params }) -> Apinoa.AdvertiserPageResponse</code></summary>
 <dl>

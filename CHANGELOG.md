@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.33
+
+Follows the API as of 2026-11-26:
+
+- New operations: `GET /v1/google/reviews`.
+
 ## 0.1.32
 
 Follows the API as of 2026-11-26:
