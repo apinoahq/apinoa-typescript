@@ -829,11 +829,12 @@ export class LinkedinClient {
         request: Apinoa.JobsLinkedinRequest = {},
         requestOptions?: LinkedinClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.JobPageResponse>> {
-        const { query, company, location, cursor } = request;
+        const { query, company, location, postedWithin, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             query,
             company,
             location,
+            postedWithin: postedWithin != null ? postedWithin : undefined,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();

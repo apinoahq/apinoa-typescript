@@ -28,6 +28,7 @@ export namespace Catalog {
                 Company: "company",
                 Unlocker: "unlocker",
                 Reader: "reader",
+                Ads: "ads",
             } as const;
             export type Kind = (typeof Kind)[keyof typeof Kind];
 

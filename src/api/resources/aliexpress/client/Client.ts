@@ -578,28 +578,27 @@ export class AliexpressClient {
      * @throws {@link errors.ApinoaTimeoutError}
      *
      * @example
-     *     await client.aliexpress.product({
-     *         id: "id"
-     *     })
+     *     await client.aliexpress.product()
      */
     public product(
-        request: Apinoa.ProductAliexpressRequest,
+        request: Apinoa.ProductAliexpressRequest = {},
         requestOptions?: AliexpressClient.RequestOptions,
     ): core.HttpResponsePromise<Apinoa.ProductResponse> {
         return core.HttpResponsePromise.fromPromise(this.__product(request, requestOptions));
     }
 
     private async __product(
-        request: Apinoa.ProductAliexpressRequest,
+        request: Apinoa.ProductAliexpressRequest = {},
         requestOptions?: AliexpressClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.ProductResponse>> {
-        const { currency, id, include, language, region } = request;
+        const { currency, id, include, language, region, url } = request;
         const _queryParams: Record<string, unknown> = {
             currency,
             id,
             include: include != null ? include : undefined,
             language,
             region,
+            url,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(

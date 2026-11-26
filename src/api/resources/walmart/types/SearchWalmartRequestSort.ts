@@ -6,5 +6,6 @@ export const SearchWalmartRequestSort = {
     PriceDesc: "price_desc",
     NewlyListed: "newly_listed",
     BestSeller: "best_seller",
+    AvgReview: "avg_review",
 } as const;
 export type SearchWalmartRequestSort = (typeof SearchWalmartRequestSort)[keyof typeof SearchWalmartRequestSort];

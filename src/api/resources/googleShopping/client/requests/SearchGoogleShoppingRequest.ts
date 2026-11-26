@@ -19,6 +19,10 @@ export interface SearchGoogleShoppingRequest {
     include?: string | string[];
     /** The market, ISO 3166-1 alpha-2: US (default), GB, CA, AU. Sets the shops, prices and currency. */
     region?: Apinoa.SearchGoogleShoppingRequestRegion;
+    /** Shop as if from this place: a city, region or US state ("Austin, Texas", "Austin, TX", "Texas"), or Google's canonical location name. It must be in the market asked (`region`). A name that matches more than one place is refused with the candidates. */
+    near?: string;
+    /** Search as if from this place, as Google's own `uule` value (`w+…`). Instead of `near`. */
+    uule?: string;
     /** Next page: pass the previous result's `cursor` alone. */
     cursor?: string;
 }

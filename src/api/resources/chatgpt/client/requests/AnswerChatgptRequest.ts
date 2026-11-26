@@ -21,6 +21,8 @@ export interface AnswerChatgptRequest {
     followUps?: string[];
     /** `page`: also return the answer as a self-contained HTML page, in `page`. */
     include?: AnswerChatgptRequest.Include;
+    /** Ask as if from this place: a city, region or US state ("Austin, Texas", "Austin, TX", "Texas"), or Google's canonical location name ("Austin,Texas,United States"). A name that matches more than one place is refused with the candidates. The place must be in the country asked. */
+    near?: string;
 }
 
 export namespace AnswerChatgptRequest {

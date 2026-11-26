@@ -318,12 +318,13 @@ export class YoutubeClient {
         request: Apinoa.PostYoutubeRequest = {},
         requestOptions?: YoutubeClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PostResponse>> {
-        const { id, include, lang, generated } = request;
+        const { id, include, lang, generated, trackName } = request;
         const _queryParams: Record<string, unknown> = {
             id,
             include,
             lang,
             generated,
+            trackName,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(

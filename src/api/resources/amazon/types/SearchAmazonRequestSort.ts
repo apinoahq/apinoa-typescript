@@ -6,5 +6,6 @@ export const SearchAmazonRequestSort = {
     PriceDesc: "price_desc",
     NewlyListed: "newly_listed",
     AvgReview: "avg_review",
+    BestSeller: "best_seller",
 } as const;
 export type SearchAmazonRequestSort = (typeof SearchAmazonRequestSort)[keyof typeof SearchAmazonRequestSort];

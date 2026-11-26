@@ -16,6 +16,7 @@ import { FacebookClient } from "./api/resources/facebook/client/Client.js";
 import { FeedbackClient } from "./api/resources/feedback/client/Client.js";
 import { GeminiClient } from "./api/resources/gemini/client/Client.js";
 import { GoogleClient } from "./api/resources/google/client/Client.js";
+import { GoogleAdsClient } from "./api/resources/googleAds/client/Client.js";
 import { GoogleAiModeClient } from "./api/resources/googleAiMode/client/Client.js";
 import { GoogleAioClient } from "./api/resources/googleAio/client/Client.js";
 import { GooglePlayClient } from "./api/resources/googlePlay/client/Client.js";
@@ -24,7 +25,9 @@ import { GoogleTrendsClient } from "./api/resources/googleTrends/client/Client.j
 import { ImageTranslateClient } from "./api/resources/imageTranslate/client/Client.js";
 import { InstagramClient } from "./api/resources/instagram/client/Client.js";
 import { LinkedinClient } from "./api/resources/linkedin/client/Client.js";
+import { LinkedinAdsClient } from "./api/resources/linkedinAds/client/Client.js";
 import { MarketplacesClient } from "./api/resources/marketplaces/client/Client.js";
+import { MetaAdsClient } from "./api/resources/metaAds/client/Client.js";
 import { MetaAiClient } from "./api/resources/metaAi/client/Client.js";
 import { NaverClient } from "./api/resources/naver/client/Client.js";
 import { NaverAiBriefClient } from "./api/resources/naverAiBrief/client/Client.js";
@@ -38,6 +41,7 @@ import { ShopifyClient } from "./api/resources/shopify/client/Client.js";
 import { SogouClient } from "./api/resources/sogou/client/Client.js";
 import { ThreadsClient } from "./api/resources/threads/client/Client.js";
 import { TiktokClient } from "./api/resources/tiktok/client/Client.js";
+import { TiktokAdsClient } from "./api/resources/tiktokAds/client/Client.js";
 import { TiktokshopClient } from "./api/resources/tiktokshop/client/Client.js";
 import { TripadvisorClient } from "./api/resources/tripadvisor/client/Client.js";
 import { UnlockerClient } from "./api/resources/unlocker/client/Client.js";
@@ -74,6 +78,7 @@ export class ApinoaClient {
     protected _facebook: FacebookClient | undefined;
     protected _gemini: GeminiClient | undefined;
     protected _google: GoogleClient | undefined;
+    protected _googleAds: GoogleAdsClient | undefined;
     protected _googleAiMode: GoogleAiModeClient | undefined;
     protected _googleAio: GoogleAioClient | undefined;
     protected _googlePlay: GooglePlayClient | undefined;
@@ -81,6 +86,8 @@ export class ApinoaClient {
     protected _googleTrends: GoogleTrendsClient | undefined;
     protected _instagram: InstagramClient | undefined;
     protected _linkedin: LinkedinClient | undefined;
+    protected _linkedinAds: LinkedinAdsClient | undefined;
+    protected _metaAds: MetaAdsClient | undefined;
     protected _metaAi: MetaAiClient | undefined;
     protected _naver: NaverClient | undefined;
     protected _naverAiBrief: NaverAiBriefClient | undefined;
@@ -93,6 +100,7 @@ export class ApinoaClient {
     protected _sogou: SogouClient | undefined;
     protected _threads: ThreadsClient | undefined;
     protected _tiktok: TiktokClient | undefined;
+    protected _tiktokAds: TiktokAdsClient | undefined;
     protected _tiktokshop: TiktokshopClient | undefined;
     protected _tripadvisor: TripadvisorClient | undefined;
     protected _unlocker: UnlockerClient | undefined;
@@ -171,6 +179,10 @@ export class ApinoaClient {
         return (this._google ??= new GoogleClient(this._options));
     }
 
+    public get googleAds(): GoogleAdsClient {
+        return (this._googleAds ??= new GoogleAdsClient(this._options));
+    }
+
     public get googleAiMode(): GoogleAiModeClient {
         return (this._googleAiMode ??= new GoogleAiModeClient(this._options));
     }
@@ -197,6 +209,14 @@ export class ApinoaClient {
 
     public get linkedin(): LinkedinClient {
         return (this._linkedin ??= new LinkedinClient(this._options));
+    }
+
+    public get linkedinAds(): LinkedinAdsClient {
+        return (this._linkedinAds ??= new LinkedinAdsClient(this._options));
+    }
+
+    public get metaAds(): MetaAdsClient {
+        return (this._metaAds ??= new MetaAdsClient(this._options));
     }
 
     public get metaAi(): MetaAiClient {
@@ -245,6 +265,10 @@ export class ApinoaClient {
 
     public get tiktok(): TiktokClient {
         return (this._tiktok ??= new TiktokClient(this._options));
+    }
+
+    public get tiktokAds(): TiktokAdsClient {
+        return (this._tiktokAds ??= new TiktokAdsClient(this._options));
     }
 
     public get tiktokshop(): TiktokshopClient {

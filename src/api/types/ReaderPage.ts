@@ -26,7 +26,7 @@ export interface ReaderPage {
     /** The page's main content as Markdown; links and images are absolute. */
     markdown: string;
     wordCount: number;
-    /** Present when `maxChars` cut the Markdown. */
+    /** Present when `maxChars` cut the Markdown or the text. */
     truncated?: boolean | undefined;
     /** Every schema.org JSON-LD block on the page, as the page states it. */
     jsonLd: unknown[];
@@ -34,4 +34,34 @@ export interface ReaderPage {
     html?: string | undefined;
     /** The page's main content as HTML (include=contentHtml). */
     contentHtml?: string | undefined;
+    /** The page's main content as plain text, a line per block (include=text). */
+    text?: string | undefined;
+    /** Every link in the main content, once each, in page order (include=links). */
+    links?: ReaderPage.Links.Item[] | undefined;
+    /** Every image in the main content, once each, in page order (include=images). `image` is the page's lead image. */
+    images?: ReaderPage.Images.Item[] | undefined;
+}
+
+export namespace ReaderPage {
+    export type Links = Links.Item[];
+
+    export namespace Links {
+        export interface Item {
+            /** The link's absolute address. */
+            url: string;
+            /** The link's text; empty when it has none. */
+            text: string;
+        }
+    }
+
+    export type Images = Images.Item[];
+
+    export namespace Images {
+        export interface Item {
+            /** The image's absolute address. */
+            url: string;
+            /** The image's alt text; empty when it has none. */
+            alt: string;
+        }
+    }
 }

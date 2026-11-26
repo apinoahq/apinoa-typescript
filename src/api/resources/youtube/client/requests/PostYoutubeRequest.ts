@@ -7,10 +7,12 @@
 export interface PostYoutubeRequest {
     /** Video id (11 chars), or the video URL (watch?v=…, youtu.be/…, /shorts/…). */
     id?: string;
-    /** Extra reads to attach under `ext`: transcript (the video's captions as timed segments, with every caption track it ships; +1 unit). */
+    /** Extra reads to attach under `ext`: transcript (the video's captions as timed segments, with every caption track it ships; +1 unit) · related (the videos YouTube recommends beside it, ext.related; no extra cost). */
     include?: string | string[];
     /** include=transcript only: preferred caption languages, in order (comma-separated): en, ko, pt-BR … `en` also matches en-US. Default: the video's own caption language. */
     lang?: string | string[];
     /** include=transcript only: true for the auto-generated (speech recognition) track, false for a track the creator supplied. Default: the creator's first. */
     generated?: boolean;
+    /** include=transcript only: read the caption track of this name, when several share a language (a track's `ext.trackName` or `ext.name` in `ext.transcript.tracks`, case-insensitive). */
+    trackName?: string;
 }

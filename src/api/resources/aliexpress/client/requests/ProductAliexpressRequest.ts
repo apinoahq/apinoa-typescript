@@ -4,19 +4,19 @@ import type * as Apinoa from "../../../../index.js";
 
 /**
  * @example
- *     {
- *         id: "id"
- *     }
+ *     {}
  */
 export interface ProductAliexpressRequest {
     /** Presentment currency. */
     currency?: string;
-    /** AliExpress product id, as carried by a search item. */
-    id: string;
+    /** AliExpress product id, as carried by a search item. Pass this or `url`. */
+    id?: string;
     /** include=shipping adds `delivery`: the cheapest shipping cost and delivery days to `region` for the product's listed variant. Costs one more unit. */
     include?: Apinoa.ProductAliexpressRequestInclude;
     /** Presentment language. */
     language?: string;
     /** Buyer country (ISO 3166-1 alpha-2). */
     region?: string;
+    /** The product page's address instead of its id, e.g. https://www.aliexpress.com/item/1005006123456789.html (any AliExpress storefront; query string ignored). Pass this or `id`. */
+    url?: string;
 }

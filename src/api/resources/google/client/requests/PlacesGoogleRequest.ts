@@ -19,10 +19,12 @@ export interface PlacesGoogleRequest {
     country?: Apinoa.PlacesGoogleRequestCountry;
     /** Interface language. */
     lang?: string;
-    /** Results wanted (default 20, at most 60). More than one page is charged per page. */
+    /** Results wanted (default 20, at most 100). More than one page is charged per page. */
     limit?: number;
-    /** Pages of 20 places to read in one call (1-3), returned as one list. Instead of `limit`; each page past the first is charged as one more unit. */
+    /** Pages of 20 places to read in one call (1-5), returned as one list. Instead of `limit`; each page past the first is charged as one more unit. */
     pages?: number;
+    /** The page of 20 places to start at (1-5): `page=3` reads places 41-60 alone. With `pages` or `limit`, reading goes on from there (no further than page 5). Not with `cursor`, which already knows its page. */
+    page?: number;
     /** The previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

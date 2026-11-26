@@ -17,9 +17,9 @@ export interface PostsYoutubeRequest {
     hashtag?: string;
     /** A video id or URL; returns the videos YouTube recommends beside it. */
     relatedTo?: string;
-    /** username/userId: which channel tab — videos (default), shorts, live or community · query: only videos, only shorts or only movies (omitted: YouTube's mixed results page, Shorts shelves included). */
+    /** username/userId: which channel tab — videos (default), shorts, live or community · query: only videos, only shorts or only movies (omitted: YouTube's mixed results page, Shorts shelves included) · hashtag: shorts (the hashtag's Shorts tab; omitted: all its videos). */
     type?: Apinoa.PostsYoutubeRequestType;
-    /** query only: relevance (default) or top (YouTube's Popularity order, which leans on views; not a strict view-count sort). */
+    /** query: relevance (default) or top (YouTube's Popularity order, which leans on views; not a strict view-count sort) · username/userId (videos, shorts or live): recent (default, newest first), top (the channel's Popular order) or oldest. */
     sort?: Apinoa.PostsYoutubeRequestSort;
     /** query only: uploaded within the last hour, today, this week, this month or this year (YouTube's upload-date filter; it has no other windows). */
     period?: Apinoa.PostsYoutubeRequestPeriod;
@@ -29,7 +29,7 @@ export interface PostsYoutubeRequest {
     features?: string | string[];
     /** Search the query exactly as typed: no "Showing results for" spelling correction (when YouTube does correct, page 1's ext.correctedQuery names what it searched). */
     exactSpelling?: boolean;
-    /** query: the country YouTube ranks the search for (ISO alpha-2, default US; it biases the ranking, it does not restrict it) · default feed: the country whose trending feed to read (default US). */
+    /** query, hashtag, relatedTo: the country YouTube ranks the results for (ISO alpha-2, default US; it biases the ranking, it does not restrict it) · default feed: the country whose trending feed to read (default US). */
     country?: string;
     /** Opaque cursor from the previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;

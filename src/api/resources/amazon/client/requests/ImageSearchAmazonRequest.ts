@@ -26,7 +26,7 @@ export interface ImageSearchAmazonRequest {
     priceMax?: number;
     /** `4` only. Amazon's rating filter offers exactly one threshold, "4 Stars & Up"; any other value is a 400 rather than a silently different search. Not available on amazon.fr (`region=FR`). */
     ratingMin?: number;
-    /** Result ordering: `best_match`, `price_asc`, `price_desc`, `newly_listed` or `avg_review`. Defaults to `best_match`, Amazon's own relevance ordering. */
+    /** Result ordering: `best_match`, `price_asc`, `price_desc`, `newly_listed`, `avg_review` or `best_seller`. Defaults to `best_match`, Amazon's own relevance ordering. */
     sort?: ImageSearchAmazonRequest.Sort;
 }
 
@@ -61,13 +61,14 @@ export namespace ImageSearchAmazonRequest {
         Au: "AU",
     } as const;
     export type Region = (typeof Region)[keyof typeof Region];
-    /** Result ordering: `best_match`, `price_asc`, `price_desc`, `newly_listed` or `avg_review`. Defaults to `best_match`, Amazon's own relevance ordering. */
+    /** Result ordering: `best_match`, `price_asc`, `price_desc`, `newly_listed`, `avg_review` or `best_seller`. Defaults to `best_match`, Amazon's own relevance ordering. */
     export const Sort = {
         BestMatch: "best_match",
         PriceAsc: "price_asc",
         PriceDesc: "price_desc",
         NewlyListed: "newly_listed",
         AvgReview: "avg_review",
+        BestSeller: "best_seller",
     } as const;
     export type Sort = (typeof Sort)[keyof typeof Sort];
 }

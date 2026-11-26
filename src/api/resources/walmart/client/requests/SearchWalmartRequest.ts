@@ -27,6 +27,6 @@ export interface SearchWalmartRequest {
     ratingMin?: number;
     /** Narrowings taken from a result's `facets`, e.g. facets=Color:Black. The escape hatch for filters the typed vocabulary has no word for; prefer a typed parameter where one exists. */
     facets?: string | string[];
-    /** Result ordering: `best_match`, `price_asc`, `price_desc`, `newly_listed` or `best_seller`. Defaults to `best_match`, Walmart's own relevance ordering. */
+    /** Result ordering: `best_match`, `price_asc`, `price_desc`, `newly_listed`, `best_seller` or `avg_review` (highest rated). Defaults to `best_match`, Walmart's own relevance ordering. */
     sort?: Apinoa.SearchWalmartRequestSort;
 }

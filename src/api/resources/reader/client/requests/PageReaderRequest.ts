@@ -11,9 +11,9 @@ import type * as Apinoa from "../../../../index.js";
 export interface PageReaderRequest {
     /** The page's address, http or https. */
     url: string;
-    /** Extra fields, comma-separated: `html` (the page as fetched), `contentHtml` (its main content as HTML). */
+    /** Extra fields, comma-separated: `html` (the page as fetched), `contentHtml` (its main content as HTML), `text` (its main content as plain text), `links` (the links in its main content), `images` (the images in its main content). */
     include?: string | string[];
-    /** Cut `markdown` to at most this many characters, at a paragraph break where one is near; `truncated` is then true. */
+    /** Cut `markdown` (and `text`) to at most this many characters, at a paragraph break where one is near; `truncated` is then true. */
     maxChars?: number;
     /** Where the page is read from. */
     country?: Apinoa.PageReaderRequestCountry;

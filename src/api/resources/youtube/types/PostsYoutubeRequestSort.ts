@@ -3,5 +3,7 @@
 export const PostsYoutubeRequestSort = {
     Relevance: "relevance",
     Top: "top",
+    Recent: "recent",
+    Oldest: "oldest",
 } as const;
 export type PostsYoutubeRequestSort = (typeof PostsYoutubeRequestSort)[keyof typeof PostsYoutubeRequestSort];

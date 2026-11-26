@@ -58,7 +58,7 @@ export class GoogleShoppingClient {
         request: Apinoa.SearchGoogleShoppingRequest = {},
         requestOptions?: GoogleShoppingClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.SearchResultResponse>> {
-        const { query, priceMin, priceMax, facets, include, region, cursor } = request;
+        const { query, priceMin, priceMax, facets, include, region, near, uule, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             query,
             priceMin,
@@ -66,6 +66,8 @@ export class GoogleShoppingClient {
             facets,
             include,
             region: region != null ? region : undefined,
+            near,
+            uule,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
@@ -194,12 +196,14 @@ export class GoogleShoppingClient {
         request: Apinoa.ProductGoogleShoppingRequest = {},
         requestOptions?: GoogleShoppingClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.ProductResponse>> {
-        const { id, url, include, region } = request;
+        const { id, url, include, region, near, uule } = request;
         const _queryParams: Record<string, unknown> = {
             id,
             url,
             include,
             region: region != null ? region : undefined,
+            near,
+            uule,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
         const _headers: core.Fetcher.Args["headers"] = mergeHeaders(

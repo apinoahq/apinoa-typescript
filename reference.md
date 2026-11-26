@@ -287,9 +287,7 @@ Returns `Product` in `data`. Costs 1 unit, up to 2 units. Reference: https://api
 <dd>
 
 ```typescript
-await client.aliexpress.product({
-    id: "id"
-});
+await client.aliexpress.product();
 
 ```
 </dd>
@@ -1815,132 +1813,6 @@ await client.facebook.profile();
 </dl>
 </details>
 
-<details><summary><code>client.facebook.<a href="/src/api/resources/facebook/client/Client.ts">profiles</a>({ ...params }) -> Apinoa.AccountPageResponse</code></summary>
-<dl>
-<dd>
-
-#### 📝 Description
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-Returns `AccountPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/facebook/profiles
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```typescript
-await client.facebook.profiles();
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-**request:** `Apinoa.ProfilesFacebookRequest` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**requestOptions:** `FacebookClient.RequestOptions` 
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
-<details><summary><code>client.facebook.<a href="/src/api/resources/facebook/client/Client.ts">ads</a>({ ...params }) -> Apinoa.FacebookAdsPageResponse</code></summary>
-<dl>
-<dd>
-
-#### 📝 Description
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-Returns `FacebookAdsPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/facebook/ads
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### 🔌 Usage
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-```typescript
-await client.facebook.ads();
-
-```
-</dd>
-</dl>
-</dd>
-</dl>
-
-#### ⚙️ Parameters
-
-<dl>
-<dd>
-
-<dl>
-<dd>
-
-**request:** `Apinoa.AdsFacebookRequest` 
-    
-</dd>
-</dl>
-
-<dl>
-<dd>
-
-**requestOptions:** `FacebookClient.RequestOptions` 
-    
-</dd>
-</dl>
-</dd>
-</dl>
-
-
-</dd>
-</dl>
-</details>
-
 ## Gemini
 <details><summary><code>client.gemini.<a href="/src/api/resources/gemini/client/Client.ts">answer</a>({ ...params }) -> Apinoa.AnswerResponse</code></summary>
 <dl>
@@ -2148,7 +2020,7 @@ await client.google.suggestions({
 <dl>
 <dd>
 
-Returns `PlacesPage` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/google/places
+Returns `PlacesPage` in `data`. Costs 1 unit, up to 5 units. Reference: https://apinoa.com/docs/api-reference/google/places
 </dd>
 </dl>
 </dd>
@@ -2251,6 +2123,259 @@ await client.google.place();
 <dd>
 
 **requestOptions:** `GoogleClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## GoogleAds
+<details><summary><code>client.googleAds.<a href="/src/api/resources/googleAds/client/Client.ts">advertisers</a>({ ...params }) -> Apinoa.AdvertiserPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AdvertiserPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/google-ads/advertisers
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.googleAds.advertisers();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdvertisersGoogleAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `GoogleAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.googleAds.<a href="/src/api/resources/googleAds/client/Client.ts">advertiser</a>({ ...params }) -> Apinoa.AdvertiserResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Advertiser` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/google-ads/advertiser
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.googleAds.advertiser();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdvertiserGoogleAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `GoogleAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.googleAds.<a href="/src/api/resources/googleAds/client/Client.ts">ads</a>({ ...params }) -> Apinoa.AdPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AdPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/google-ads/ads
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.googleAds.ads();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdsGoogleAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `GoogleAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.googleAds.<a href="/src/api/resources/googleAds/client/Client.ts">ad</a>({ ...params }) -> Apinoa.AdResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Ad` in `data`. Costs 1 unit, up to 11 units. Reference: https://apinoa.com/docs/api-reference/google-ads/ad
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.googleAds.ad();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdGoogleAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `GoogleAdsClient.RequestOptions` 
     
 </dd>
 </dl>
@@ -3715,6 +3840,262 @@ await client.linkedin.jobs();
 <dd>
 
 **requestOptions:** `LinkedinClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## LinkedinAds
+<details><summary><code>client.linkedinAds.<a href="/src/api/resources/linkedinAds/client/Client.ts">ads</a>({ ...params }) -> Apinoa.AdPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AdPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/linkedin-ads/ads
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.linkedinAds.ads();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdsLinkedinAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `LinkedinAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.linkedinAds.<a href="/src/api/resources/linkedinAds/client/Client.ts">ad</a>({ ...params }) -> Apinoa.AdResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Ad` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/linkedin-ads/ad
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.linkedinAds.ad();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdLinkedinAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `LinkedinAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## MetaAds
+<details><summary><code>client.metaAds.<a href="/src/api/resources/metaAds/client/Client.ts">ads</a>({ ...params }) -> Apinoa.AdPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AdPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/meta-ads/ads
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.metaAds.ads();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdsMetaAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `MetaAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.metaAds.<a href="/src/api/resources/metaAds/client/Client.ts">advertisers</a>({ ...params }) -> Apinoa.AdvertiserPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AdvertiserPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/meta-ads/advertisers
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.metaAds.advertisers({
+    query: "query"
+});
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdvertisersMetaAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `MetaAdsClient.RequestOptions` 
     
 </dd>
 </dl>
@@ -6150,6 +6531,196 @@ await client.tiktok.media();
 <dd>
 
 **requestOptions:** `TiktokClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+## TiktokAds
+<details><summary><code>client.tiktokAds.<a href="/src/api/resources/tiktokAds/client/Client.ts">ads</a>({ ...params }) -> Apinoa.AdPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AdPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok-ads/ads
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.tiktokAds.ads();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdsTiktokAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `TiktokAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.tiktokAds.<a href="/src/api/resources/tiktokAds/client/Client.ts">ad</a>({ ...params }) -> Apinoa.AdResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Ad` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok-ads/ad
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.tiktokAds.ad();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdTiktokAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `TiktokAdsClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.tiktokAds.<a href="/src/api/resources/tiktokAds/client/Client.ts">advertisers</a>({ ...params }) -> Apinoa.AdvertiserPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `AdvertiserPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/tiktok-ads/advertisers
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.tiktokAds.advertisers();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.AdvertisersTiktokAdsRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `TiktokAdsClient.RequestOptions` 
     
 </dd>
 </dl>

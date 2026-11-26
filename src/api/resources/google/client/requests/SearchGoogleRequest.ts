@@ -31,6 +31,8 @@ export interface SearchGoogleRequest {
     limit?: number;
     /** Result pages to read in one call (1-10), returned as one list. Instead of `limit`; each page past the first is charged as one more unit. */
     pages?: number;
+    /** The result page to start at (1-10): `page=3` reads page 3 alone, the way Google numbers its pages. With `pages` or `limit`, reading goes on from there (no further than page 10). Not with `cursor`, which already knows its page. */
+    page?: number;
     /** The previous page's `cursor`. Pass it alone for the next page. */
     cursor?: string;
 }

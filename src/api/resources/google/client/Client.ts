@@ -71,6 +71,7 @@ export class GoogleClient {
             uule,
             limit,
             pages,
+            page,
             cursor,
         } = request;
         const _queryParams: Record<string, unknown> = {
@@ -86,6 +87,7 @@ export class GoogleClient {
             uule,
             limit,
             pages,
+            page,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
@@ -312,7 +314,7 @@ export class GoogleClient {
     }
 
     /**
-     * Returns `PlacesPage` in `data`. Costs 1 unit, up to 3 units. Reference: https://apinoa.com/docs/api-reference/google/places
+     * Returns `PlacesPage` in `data`. Costs 1 unit, up to 5 units. Reference: https://apinoa.com/docs/api-reference/google/places
      *
      * @param {Apinoa.PlacesGoogleRequest} request
      * @param {GoogleClient.RequestOptions} requestOptions - Request-specific configuration.
@@ -344,7 +346,7 @@ export class GoogleClient {
         request: Apinoa.PlacesGoogleRequest = {},
         requestOptions?: GoogleClient.RequestOptions,
     ): Promise<core.WithRawResponse<Apinoa.PlacesPageResponse>> {
-        const { q, location, near, uule, country, lang, limit, pages, cursor } = request;
+        const { q, location, near, uule, country, lang, limit, pages, page, cursor } = request;
         const _queryParams: Record<string, unknown> = {
             q,
             location,
@@ -354,6 +356,7 @@ export class GoogleClient {
             lang,
             limit,
             pages,
+            page,
             cursor,
         };
         const _authRequest: core.AuthRequest = await this._options.authProvider.getAuthRequest();
