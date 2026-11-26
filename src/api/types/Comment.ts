@@ -35,6 +35,7 @@ export namespace Comment {
         Threads: "threads",
         X: "x",
         Facebook: "facebook",
+        Xiaohongshu: "xiaohongshu",
     } as const;
     export type Platform = (typeof Platform)[keyof typeof Platform];
 

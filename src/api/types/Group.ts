@@ -28,6 +28,7 @@ export namespace Group {
         Threads: "threads",
         X: "x",
         Facebook: "facebook",
+        Xiaohongshu: "xiaohongshu",
     } as const;
     export type Platform = (typeof Platform)[keyof typeof Platform];
     export const Kind = {
