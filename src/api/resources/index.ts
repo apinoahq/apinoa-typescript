@@ -120,6 +120,8 @@ export * as walmart from "./walmart/index.js";
 export * from "./walmart/types/index.js";
 export * from "./x/client/requests/index.js";
 export * as x from "./x/index.js";
+export * from "./xiaohongshu/client/requests/index.js";
+export * as xiaohongshu from "./xiaohongshu/index.js";
 export * from "./yahoo/client/requests/index.js";
 export * as yahoo from "./yahoo/index.js";
 export * from "./yahoo/types/index.js";

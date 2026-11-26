@@ -8015,6 +8015,196 @@ await client.x.group();
 </dl>
 </details>
 
+## Xiaohongshu
+<details><summary><code>client.xiaohongshu.<a href="/src/api/resources/xiaohongshu/client/Client.ts">profile</a>({ ...params }) -> Apinoa.AccountResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Account` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/xiaohongshu/profile
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.xiaohongshu.profile();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.ProfileXiaohongshuRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `XiaohongshuClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.xiaohongshu.<a href="/src/api/resources/xiaohongshu/client/Client.ts">post</a>({ ...params }) -> Apinoa.PostResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `Post` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/xiaohongshu/post
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.xiaohongshu.post();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.PostXiaohongshuRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `XiaohongshuClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
+<details><summary><code>client.xiaohongshu.<a href="/src/api/resources/xiaohongshu/client/Client.ts">posts</a>({ ...params }) -> Apinoa.PostPageResponse</code></summary>
+<dl>
+<dd>
+
+#### 📝 Description
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+Returns `PostPage` in `data`. Costs 1 unit. Reference: https://apinoa.com/docs/api-reference/xiaohongshu/posts
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### 🔌 Usage
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+```typescript
+await client.xiaohongshu.posts();
+
+```
+</dd>
+</dl>
+</dd>
+</dl>
+
+#### ⚙️ Parameters
+
+<dl>
+<dd>
+
+<dl>
+<dd>
+
+**request:** `Apinoa.PostsXiaohongshuRequest` 
+    
+</dd>
+</dl>
+
+<dl>
+<dd>
+
+**requestOptions:** `XiaohongshuClient.RequestOptions` 
+    
+</dd>
+</dl>
+</dd>
+</dl>
+
+
+</dd>
+</dl>
+</details>
+
 ## Yahoo
 <details><summary><code>client.yahoo.<a href="/src/api/resources/yahoo/client/Client.ts">search</a>({ ...params }) -> Apinoa.ResultsPageResponse</code></summary>
 <dl>

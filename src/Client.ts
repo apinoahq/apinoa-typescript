@@ -47,6 +47,7 @@ import { TripadvisorClient } from "./api/resources/tripadvisor/client/Client.js"
 import { UnlockerClient } from "./api/resources/unlocker/client/Client.js";
 import { WalmartClient } from "./api/resources/walmart/client/Client.js";
 import { XClient } from "./api/resources/x/client/Client.js";
+import { XiaohongshuClient } from "./api/resources/xiaohongshu/client/Client.js";
 import { YahooClient } from "./api/resources/yahoo/client/Client.js";
 import { YahooJapanClient } from "./api/resources/yahooJapan/client/Client.js";
 import { YandexClient } from "./api/resources/yandex/client/Client.js";
@@ -106,6 +107,7 @@ export class ApinoaClient {
     protected _unlocker: UnlockerClient | undefined;
     protected _walmart: WalmartClient | undefined;
     protected _x: XClient | undefined;
+    protected _xiaohongshu: XiaohongshuClient | undefined;
     protected _yahoo: YahooClient | undefined;
     protected _yahooJapan: YahooJapanClient | undefined;
     protected _yandex: YandexClient | undefined;
@@ -289,6 +291,10 @@ export class ApinoaClient {
 
     public get x(): XClient {
         return (this._x ??= new XClient(this._options));
+    }
+
+    public get xiaohongshu(): XiaohongshuClient {
+        return (this._xiaohongshu ??= new XiaohongshuClient(this._options));
     }
 
     public get yahoo(): YahooClient {

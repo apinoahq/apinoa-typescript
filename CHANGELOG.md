@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.35
+
+Follows the API as of 2026-11-26:
+
+- New operations: `GET /v1/xiaohongshu/profile`, `GET /v1/xiaohongshu/post`, `GET /v1/xiaohongshu/posts`.
+
 ## 0.1.34
 
 Follows the API as of 2026-11-26.
